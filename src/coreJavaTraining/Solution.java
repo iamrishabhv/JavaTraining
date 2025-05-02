@@ -9,7 +9,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
+        String s = scan.nextLine().trim();
         // Write your code here.
         if (s.isEmpty()) {
         	System.out.println(0);
