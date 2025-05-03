@@ -35,9 +35,9 @@ public class stringConcatenation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		stringConcatenation sc = new stringConcatenation();	//Object created for calling method defined in public class
-		stringConcatenation sd = new stringConcatenation();
-		stringConcatenation se = new stringConcatenation();
+		stringConcatenation sc = new stringConcatenation();	//Object for Method 1
+		stringConcatenation sd = new stringConcatenation();	//Object for Method 2
+		stringConcatenation se = new stringConcatenation();	//Object for Method 3
 		sc.literalConcat();
 		sd.endConcate();
 		se.bufferConcate();
