@@ -1,3 +1,4 @@
+//https://www.codechef.com/blogs/strings-in-java
 package coreJavaTraining;
 
 import java.util.Scanner;
