@@ -20,13 +20,24 @@ public class loopsDemo {
 		}
 		
 		//Do While Loop
-		
 		int c = 1;
 		int j = 4;
 		do {
 			System.out.println("I am in a Do-While Loop");
 		}
 		while(j<c);
+		
+		//Nested Loops
+		
+		for(int d=1; d<=4; d++) {
+			
+			for(int e=1; e<=4; e++) {
+				System.out.println("I am in the Inner For Loop");
+			}
+			
+			System.out.println("I am in the Outer For Loop");
+		}
+		
 	}
 
 }
