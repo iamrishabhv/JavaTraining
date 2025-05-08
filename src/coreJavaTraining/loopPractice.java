@@ -48,6 +48,7 @@ public class loopPractice {
 		int sum = 0;
 		float average = 0;
 		for(int a=1;a<=10;a++) {
+			System.out.printf("%nEnter the Numbers for which Sum & Average to be Calculated");
 			Scanner scan = new Scanner(System.in);
 			System.out.print("\n");
 			System.out.printf("Number %d:", a);
@@ -63,7 +64,7 @@ public class loopPractice {
 
 	//Display Cube of Numbers Up to an Integer
 	public void cube() {
-		System.out.printf("How many number you want the cubes of?5 %n");
+		System.out.printf("%nHow many number you want the cubes of? %n");
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		for(int a=1;a<=x;a++) {
@@ -75,6 +76,33 @@ public class loopPractice {
 		}
 	}
 	
+	//Multiplication Table for a Given Integer
+	public void multiply() {
+		System.out.printf("For which number you want the Multiplication Table for? %n");
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		for(int i=1;i<=10;i++) {
+			int multiple = 0;
+			multiple = x*i;
+			System.out.printf("%d X %d = %d%n", x,i,multiple);
+		}
+	}
+	
+	//Vertical Multiplier Table from 1 to n
+	public void verticalMultiply() {
+		System.out.printf("Input upto the table number %n");
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		for(int j=1; j<=x; j++){
+			System.out.println();
+			for(int i=1;i<=10;i++) {
+				int multiple = 0;
+				multiple = j*i;
+				System.out.printf("%d X %d = %d\t", j,i,multiple);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		loopPractice nN = new loopPractice();
@@ -82,11 +110,15 @@ public class loopPractice {
 		loopPractice nNNS = new loopPractice();
 		loopPractice an = new loopPractice();
 		loopPractice cu = new loopPractice();
+		loopPractice mu = new loopPractice();
+		loopPractice vm = new loopPractice();
 		nN.naturalNo();
 		nNS.naturalNoSum();
 		nNNS.nNaturalNo();
 		an.avgNo();
 		cu.cube();
+		mu.multiply();
+		vm.verticalMultiply();
 	}
 
 }
