@@ -31,7 +31,7 @@ public class loopPractice {
 		int count1 = 0;
 		Scanner scan = new Scanner(System.in);
 		System.out.print("\n");
-		System.out.println("Test Data:");
+		System.out.println("Input Terms:");
 		int n = scan.nextInt();
 		System.out.printf("The first %d Natural Number are:",n);
 		for(int i=1; i<=n; i++) {
@@ -47,8 +47,8 @@ public class loopPractice {
 	public void avgNo(){
 		int sum = 0;
 		float average = 0;
+		System.out.printf("%n%nEnter the Numbers for which Sum & Average to be Calculated");
 		for(int a=1;a<=10;a++) {
-			System.out.printf("%nEnter the Numbers for which Sum & Average to be Calculated");
 			Scanner scan = new Scanner(System.in);
 			System.out.print("\n");
 			System.out.printf("Number %d:", a);
@@ -64,7 +64,7 @@ public class loopPractice {
 
 	//Display Cube of Numbers Up to an Integer
 	public void cube() {
-		System.out.printf("%nHow many number you want the cubes of? %n");
+		System.out.printf("%n%nHow many number you want the cubes of? %n");
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		for(int a=1;a<=x;a++) {
@@ -78,7 +78,7 @@ public class loopPractice {
 	
 	//Multiplication Table for a Given Integer
 	public void multiply() {
-		System.out.printf("For which number you want the Multiplication Table for? %n");
+		System.out.printf("%n%nFor which number you want the Multiplication Table for? %n");
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		for(int i=1;i<=10;i++) {
@@ -90,7 +90,7 @@ public class loopPractice {
 	
 	//Vertical Multiplier Table from 1 to n
 	public void verticalMultiply() {
-		System.out.printf("Input upto the table number %n");
+		System.out.printf("%n%nInput upto the table number %n");
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		for(int j=1; j<=x; j++){
@@ -105,7 +105,7 @@ public class loopPractice {
 	
 	//Odd Natural Numbers and Their Sum
 	public void oddNN(){
-		System.out.printf("Input upto the table number %n");
+		System.out.printf("%n%nInput upto the table number %n");
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		int j = 1;
@@ -121,6 +121,7 @@ public class loopPractice {
 	
 	//Right Angle Triangle Pattern with Asterisks
 	public void rightTriangle() {
+		System.out.println("%n");
 		for(int i=1; i<=4; i++) {
 			for(int j=1; j<=i; j++) {
 				System.out.print("*");
