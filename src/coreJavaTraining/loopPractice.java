@@ -103,6 +103,94 @@ public class loopPractice {
 		}
 	}
 	
+	//Odd Natural Numbers and Their Sum
+	public void oddNN(){
+		System.out.printf("Input upto the table number %n");
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		int j = 1;
+		int sum = 0;
+		System.out.printf("The odd numbers are: ");
+		for(int i=1; i<=x; i++){
+				System.out.print(j + " ");
+				sum = sum+j;
+				j = j+2;
+			}
+		System.out.printf("%nThe sum of odd natural numbers upto %d terms: %d", x, sum);
+		}
+	
+	//Right Angle Triangle Pattern with Asterisks
+	public void rightTriangle() {
+		for(int i=1; i<=4; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	//Right Angle Triangle Pattern with Numbers
+	public void rightTriangleNumber() {
+		for(int i=1; i<=4; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+	
+	//Right Angle Triangle with Repeated Number per Row
+	public void rightTriangleRepeatedNumber() {
+		for(int i=1; i<=4; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	
+	//Right Angle Triangle with Sequentially Increasing Numbers
+	public void rightTriangleIncreasingNumber() {
+		int s = 1;
+		for(int i=1; i<=4; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print(s);
+				s++;
+			}
+			System.out.println();
+		}
+	}
+	
+	//Pyramid Pattern with Increasing Numbers
+	public void pyramidIncreasingNumber() {
+		int s = 1;
+		int rows = 4;
+		for(int i=1; i<=4; i++) {
+			for(int space = 1; space <= rows-i; space++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.printf("%d ",s);
+				s++;
+			}
+			System.out.println();
+		}
+	}
+	
+	//Pyramid Pattern with Increasing Numbers
+	public void pyramidIncreasingStars() {
+		int rows = 4;
+		for(int i=1; i<=4; i++) {
+			for(int space = 1; space <= rows-i; space++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.printf("%s ","*");
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		loopPractice nN = new loopPractice();
@@ -112,6 +200,13 @@ public class loopPractice {
 		loopPractice cu = new loopPractice();
 		loopPractice mu = new loopPractice();
 		loopPractice vm = new loopPractice();
+		loopPractice oNN = new loopPractice();
+		loopPractice rAT = new loopPractice();
+		loopPractice rTN = new loopPractice();
+		loopPractice rTRN = new loopPractice();
+		loopPractice rTIN = new loopPractice();
+		loopPractice pIN = new loopPractice();
+		loopPractice pIS = new loopPractice();
 		nN.naturalNo();
 		nNS.naturalNoSum();
 		nNNS.nNaturalNo();
@@ -119,6 +214,13 @@ public class loopPractice {
 		cu.cube();
 		mu.multiply();
 		vm.verticalMultiply();
+		oNN.oddNN();
+		rAT.rightTriangle();
+		rTN.rightTriangleNumber();
+		rTRN.rightTriangleRepeatedNumber();
+		rTIN.rightTriangleIncreasingNumber();
+		pIN.pyramidIncreasingNumber();
+		pIS.pyramidIncreasingStars();
 	}
 
 }
