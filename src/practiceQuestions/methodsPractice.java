@@ -134,6 +134,25 @@ public class methodsPractice {
 			System.out.printf("Password is Invalid: %s",a);
 	}
 	}
+	
+	//Display n-by-n Matrix (Identity Matrix)
+	public void nMatrix() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number: ");
+		int n = sc.nextInt();
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n; j++) {
+				if(i==j) {
+					System.out.print("1");
+				}
+				else {
+					System.out.print("0");
+				}
+			}
+			System.out.println();
+		}
+	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -145,6 +164,7 @@ public class methodsPractice {
 		methodsPractice cP = new methodsPractice();
 		methodsPractice cLY = new methodsPractice();
 		methodsPractice vP = new methodsPractice();
+		methodsPractice nM = new methodsPractice();
 		sN.smallNumber();
 		aN.avgNumber();
 		System.out.printf("The middle character in the string: " + middleString());
@@ -153,6 +173,7 @@ public class methodsPractice {
 		cP.charPrint();
 		cLY.checkLeapYear();
 		vP.validatePassword();
+		nM.nMatrix();
 	}
 
 }
