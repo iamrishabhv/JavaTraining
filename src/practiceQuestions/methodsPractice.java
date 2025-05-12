@@ -96,6 +96,19 @@ public class methodsPractice {
 			c++;
 		}
 	}
+	
+	//Check Leap Year
+	public void checkLeapYear() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Year: ");
+		int y = sc.nextInt();
+		if((y%4==0 && y%100!=0) || y%400==0) {
+				System.out.println("This is a Leap Year");
+			}
+			else {
+				System.out.println("This is NOT a Leap Year");
+			}
+		}	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -105,12 +118,14 @@ public class methodsPractice {
 		methodsPractice cI = new methodsPractice();
 		methodsPractice Pn = new methodsPractice();
 		methodsPractice cP = new methodsPractice();
+		methodsPractice cLY = new methodsPractice();
 		sN.smallNumber();
 		aN.avgNumber();
 		System.out.printf("The middle character in the string: " + middleString());
 		cI.compoundInvest();
 		Pn.pentagonalNumber();
 		cP.charPrint();
+		cLY.checkLeapYear();
 	}
 
 }
