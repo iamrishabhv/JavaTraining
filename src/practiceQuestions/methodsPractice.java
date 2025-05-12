@@ -108,7 +108,32 @@ public class methodsPractice {
 			else {
 				System.out.println("This is NOT a Leap Year");
 			}
-		}	
+		}
+	
+	//Validate Password
+	public void validatePassword() {
+		System.out.println("A password must have at least eight characters.");
+		System.out.println("A password consists of only letters and digits.");
+		System.out.println("A password must contain at least two digits");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input Password (You are agreeing to the above Terms and Conditions.): ");
+		String a = sc.nextLine();
+		if(a.length() >= 10 && a.matches("[a-zA-Z0-9]+")) {
+			int digitCount = 0;
+			for(int i=0; i<a.length(); i++) {
+				if(Character.isDigit(a.charAt(i))) {
+					digitCount++;
+				}
+			}
+			
+		if(digitCount >=2) {
+				System.out.printf("Password is Valid: %s",a);
+			}
+		}
+		else {
+			System.out.printf("Password is Invalid: %s",a);
+	}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -119,6 +144,7 @@ public class methodsPractice {
 		methodsPractice Pn = new methodsPractice();
 		methodsPractice cP = new methodsPractice();
 		methodsPractice cLY = new methodsPractice();
+		methodsPractice vP = new methodsPractice();
 		sN.smallNumber();
 		aN.avgNumber();
 		System.out.printf("The middle character in the string: " + middleString());
@@ -126,6 +152,7 @@ public class methodsPractice {
 		Pn.pentagonalNumber();
 		cP.charPrint();
 		cLY.checkLeapYear();
+		vP.validatePassword();
 	}
 
 }
