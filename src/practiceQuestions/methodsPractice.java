@@ -74,6 +74,28 @@ public class methodsPractice {
 		System.out.printf("Future Value for Year %d: %.2f%n", i, A);
 		}
 	}
+	
+	//Display First 50 Pentagonal Numbers
+	public void pentagonalNumber() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number of Terms: ");
+		int n = sc.nextInt();
+		int a = 1;
+		for(int i = 1; i<=n; i++) {
+			int Pn = a*(3*a-1)/2;
+			System.out.print(Pn + "\t");
+			a++;
+			}
+	}
+	
+	//Print Characters Between Two Characters
+	public void charPrint() {
+		char c = 40;
+		for(int i=1; i<=126; i++) {
+			System.out.print(c + "\t");
+			c++;
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -81,10 +103,14 @@ public class methodsPractice {
 		methodsPractice aN = new methodsPractice();
 		methodsPractice mS = new methodsPractice();
 		methodsPractice cI = new methodsPractice();
+		methodsPractice Pn = new methodsPractice();
+		methodsPractice cP = new methodsPractice();
 		sN.smallNumber();
 		aN.avgNumber();
 		System.out.printf("The middle character in the string: " + middleString());
 		cI.compoundInvest();
+		Pn.pentagonalNumber();
+		cP.charPrint();
 	}
 
 }
