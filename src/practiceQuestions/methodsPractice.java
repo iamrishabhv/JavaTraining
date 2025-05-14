@@ -152,6 +152,25 @@ public class methodsPractice {
 			System.out.println();
 		}
 	}
+	
+	//Calculate Triangle Area
+	public void areaTriangle() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the length of 1st Side: ");
+		float s1 = sc.nextFloat();
+		System.out.println("Enter the length of 2nd Side: ");
+		float s2 = sc.nextFloat();
+		System.out.println("Enter the length of 3rd Side: ");
+		float s3 = sc.nextFloat();
+		if(s1+s2 > s3 && s2+s3 > s1 && s1+s3 > s2) {
+			float s = (s1 + s2 + s3)/2;							//Formula for Calculating Semi-Parameter of a Triangle
+			double A = Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));		//Formula for Calculating the Area of a Triangle
+			System.out.printf("The area of the triangle is %f", A);
+		}
+		else {
+			System.out.printf("The given sides do not form a valid triangle.");
+		}
+	}
 
 
 	public static void main(String[] args) {
@@ -165,15 +184,17 @@ public class methodsPractice {
 		methodsPractice cLY = new methodsPractice();
 		methodsPractice vP = new methodsPractice();
 		methodsPractice nM = new methodsPractice();
-		sN.smallNumber();
-		aN.avgNumber();
-		System.out.printf("The middle character in the string: " + middleString());
-		cI.compoundInvest();
-		Pn.pentagonalNumber();
-		cP.charPrint();
-		cLY.checkLeapYear();
-		vP.validatePassword();
-		nM.nMatrix();
+		methodsPractice aT = new methodsPractice();
+//		sN.smallNumber();
+//		aN.avgNumber();
+//		System.out.printf("The middle character in the string: " + middleString());
+//		cI.compoundInvest();
+//		Pn.pentagonalNumber();
+//		cP.charPrint();
+//		cLY.checkLeapYear();
+//		vP.validatePassword();
+//		nM.nMatrix();
+		aT.areaTriangle();
 	}
 
 }
