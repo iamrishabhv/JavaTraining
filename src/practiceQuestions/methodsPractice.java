@@ -171,6 +171,33 @@ public class methodsPractice {
 			System.out.printf("The given sides do not form a valid triangle.");
 		}
 	}
+	
+	//Prime Number Check
+	public static boolean isPrime(int num) {
+		if(num <= 1)
+			return false;
+		if(num == 2)
+			return true;
+		if(num % 2 == 0)
+			return false;
+		for(int i=3; i<=Math.sqrt(num); i++) {
+			if(num % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public void checkPrime() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your number: ");
+		int num = sc.nextInt();
+		if(isPrime(num)) {
+			System.out.println(num + " is a Prime Number");
+		}
+		else {
+			System.out.println(num + " is not a Prime Number");
+		}
+	}
 
 
 	public static void main(String[] args) {
@@ -185,6 +212,7 @@ public class methodsPractice {
 		methodsPractice vP = new methodsPractice();
 		methodsPractice nM = new methodsPractice();
 		methodsPractice aT = new methodsPractice();
+		methodsPractice iP = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -194,7 +222,8 @@ public class methodsPractice {
 //		cLY.checkLeapYear();
 //		vP.validatePassword();
 //		nM.nMatrix();
-		aT.areaTriangle();
+//		aT.areaTriangle();
+		iP.checkPrime();
 	}
 
 }
