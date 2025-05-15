@@ -198,6 +198,24 @@ public class methodsPractice {
 			System.out.println(num + " is not a Prime Number");
 		}
 	}
+	
+	//Count Occurrences of Digit '2' in Integer
+	public void checkDigit() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number: ");
+		  String a = sc.nextLine();
+		  int digitCount = 0;
+		  for (int i = 0; i < a.length(); i++) {
+		    if (a.charAt(i) == '2') {
+		      digitCount++;
+		    }
+		  }
+		  if (digitCount > 0) {
+		    System.out.printf("The no. of Digit 2 in the given Number are: %d",digitCount);
+		  } else {
+		    System.out.println("There are no Digit 2 in the given Number");
+		  }
+		}
 
 
 	public static void main(String[] args) {
@@ -213,6 +231,7 @@ public class methodsPractice {
 		methodsPractice nM = new methodsPractice();
 		methodsPractice aT = new methodsPractice();
 		methodsPractice iP = new methodsPractice();
+		methodsPractice cD = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -223,7 +242,8 @@ public class methodsPractice {
 //		vP.validatePassword();
 //		nM.nMatrix();
 //		aT.areaTriangle();
-		iP.checkPrime();
+//		iP.checkPrime();
+		cD.checkDigit();
 	}
 
 }
