@@ -1,5 +1,6 @@
 package practiceQuestions;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class methodsPractice {
@@ -216,6 +217,43 @@ public class methodsPractice {
 		    System.out.println("There are no Digit 2 in the given Number");
 		  }
 		}
+	
+	//Check Consecutive Integers
+	public void checkConsecutiveInts(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st Integer: ");
+		int a = sc.nextInt();
+		System.out.println("Enter the 2nd Integer: ");
+		int b = sc.nextInt();
+		System.out.println("Enter the 3rd Integer: ");
+		int c = sc.nextInt();
+		if(b-a == 1 && c-b == 1) {
+			System.out.println("Consecutive Integers");
+		}
+		else {
+			System.out.println("Not Consecutive Integers");
+		}
+	}
+	
+	//Check If One Integer is Midpoint of Others
+	public void midPoint() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st Integer: ");
+		int a = sc.nextInt();
+		System.out.println("Enter the 2nd Integer: ");
+		int b = sc.nextInt();
+		System.out.println("Enter the 3rd Integer: ");
+		int c = sc.nextInt();
+		
+		int[] num = {a,b,c};
+		Arrays.sort(num);
+		if((num[1] - num[0]) == (num[2] - num[1])) {
+			System.out.printf("Mid-Point: %d",num[1]);
+		}
+		else {
+			System.out.printf("There is no Mid-Point");
+		}
+	}
 
 
 	public static void main(String[] args) {
@@ -232,6 +270,8 @@ public class methodsPractice {
 		methodsPractice aT = new methodsPractice();
 		methodsPractice iP = new methodsPractice();
 		methodsPractice cD = new methodsPractice();
+		methodsPractice cCI = new methodsPractice();
+		methodsPractice mP = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -243,7 +283,9 @@ public class methodsPractice {
 //		nM.nMatrix();
 //		aT.areaTriangle();
 //		iP.checkPrime();
-		cD.checkDigit();
+//		cD.checkDigit();
+//		cCI.checkConsecutiveInts();
+		mP.midPoint();
 	}
 
 }
