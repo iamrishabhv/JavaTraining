@@ -272,19 +272,19 @@ public class methodsPractice {
 		methodsPractice cD = new methodsPractice();
 		methodsPractice cCI = new methodsPractice();
 		methodsPractice mP = new methodsPractice();
-//		sN.smallNumber();
-//		aN.avgNumber();
-//		System.out.printf("The middle character in the string: " + middleString());
-//		cI.compoundInvest();
-//		Pn.pentagonalNumber();
-//		cP.charPrint();
-//		cLY.checkLeapYear();
-//		vP.validatePassword();
-//		nM.nMatrix();
-//		aT.areaTriangle();
-//		iP.checkPrime();
-//		cD.checkDigit();
-//		cCI.checkConsecutiveInts();
+		sN.smallNumber();
+		aN.avgNumber();
+		System.out.printf("The middle character in the string: " + middleString());
+		cI.compoundInvest();
+		Pn.pentagonalNumber();
+		cP.charPrint();
+		cLY.checkLeapYear();
+		vP.validatePassword();
+		nM.nMatrix();
+		aT.areaTriangle();
+		iP.checkPrime();
+		cD.checkDigit();
+		cCI.checkConsecutiveInts();
 		mP.midPoint();
 	}
 
