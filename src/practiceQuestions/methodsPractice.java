@@ -254,6 +254,15 @@ public class methodsPractice {
 			System.out.printf("There is no Mid-Point");
 		}
 	}
+	
+	//Extract First Digit of Integer
+	public void firstDigit() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input an integer(positive/negative): ");
+		String a = sc.nextLine();
+		char b = a.charAt(0);
+		System.out.printf("Extract the first digit from the said integer: %c", b);
+	}
 
 
 	public static void main(String[] args) {
@@ -272,20 +281,22 @@ public class methodsPractice {
 		methodsPractice cD = new methodsPractice();
 		methodsPractice cCI = new methodsPractice();
 		methodsPractice mP = new methodsPractice();
-		sN.smallNumber();
-		aN.avgNumber();
-		System.out.printf("The middle character in the string: " + middleString());
-		cI.compoundInvest();
-		Pn.pentagonalNumber();
-		cP.charPrint();
-		cLY.checkLeapYear();
-		vP.validatePassword();
-		nM.nMatrix();
-		aT.areaTriangle();
-		iP.checkPrime();
-		cD.checkDigit();
-		cCI.checkConsecutiveInts();
-		mP.midPoint();
+		methodsPractice fD = new methodsPractice();
+//		sN.smallNumber();
+//		aN.avgNumber();
+//		System.out.printf("The middle character in the string: " + middleString());
+//		cI.compoundInvest();
+//		Pn.pentagonalNumber();
+//		cP.charPrint();
+//		cLY.checkLeapYear();
+//		vP.validatePassword();
+//		nM.nMatrix();
+//		aT.areaTriangle();
+//		iP.checkPrime();
+//		cD.checkDigit();
+//		cCI.checkConsecutiveInts();
+//		mP.midPoint();
+		fD.firstDigit();
 	}
 
 }
