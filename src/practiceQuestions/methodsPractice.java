@@ -276,6 +276,30 @@ public class methodsPractice {
 		}
 		System.out.print(result);
 	}
+	
+	//Check If All Digits in Integer Are Even
+	public static boolean evenInts(int num) {
+		String a = Integer.toString(Math.abs(num));
+		for(int i = 0; i < a.length(); i++) {
+			int digit = a.charAt(i) - '0';
+			if(digit % 2 != 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public void evenInteger() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input an integer: ");
+		int a = sc.nextInt();
+		if(evenInts(a)) {
+			System.out.print("true");
+		}
+		else {
+			System.out.print("false");
+		}
+	}
 
 
 	public static void main(String[] args) {
@@ -296,6 +320,7 @@ public class methodsPractice {
 		methodsPractice mP = new methodsPractice();
 		methodsPractice fD = new methodsPractice();
 		methodsPractice f = new methodsPractice();
+		methodsPractice eI = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -311,7 +336,8 @@ public class methodsPractice {
 //		cCI.checkConsecutiveInts();
 //		mP.midPoint();
 //		fD.firstDigit();
-		f.factor();
+//		f.factor();
+		eI.evenInteger();
 	}
 
 }
