@@ -300,6 +300,22 @@ public class methodsPractice {
 			System.out.print("false");
 		}
 	}
+	
+	//Check If All Characters Are Vowels
+	public void checkVowels() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String to be Checked: ");
+		String a = sc.nextLine();
+		String b = a.toLowerCase();
+		for(int i = 0; i < b.length(); i++) {
+			char ch = b.charAt(i);
+			if("aeiou".indexOf(ch) == -1) {
+				System.out.println("False");
+				return;
+			}
+		}
+		System.out.println("True");
+	}
 
 
 	public static void main(String[] args) {
@@ -321,6 +337,7 @@ public class methodsPractice {
 		methodsPractice fD = new methodsPractice();
 		methodsPractice f = new methodsPractice();
 		methodsPractice eI = new methodsPractice();
+		methodsPractice cV = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -337,7 +354,8 @@ public class methodsPractice {
 //		mP.midPoint();
 //		fD.firstDigit();
 //		f.factor();
-		eI.evenInteger();
+//		eI.evenInteger();
+		cV.checkVowels();
 	}
 
 }
