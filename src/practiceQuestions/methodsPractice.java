@@ -263,6 +263,19 @@ public class methodsPractice {
 		char b = a.charAt(0);
 		System.out.printf("Extract the first digit from the said integer: %c", b);
 	}
+	
+	//Display Factors of 3 in Integer
+	public void factor() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Integer: ");
+		int n = sc.nextInt();
+		int result = n;
+		while(result % 3 == 0) {
+			System.out.print("3 * ");
+			result = result / 3;
+		}
+		System.out.print(result);
+	}
 
 
 	public static void main(String[] args) {
@@ -282,6 +295,7 @@ public class methodsPractice {
 		methodsPractice cCI = new methodsPractice();
 		methodsPractice mP = new methodsPractice();
 		methodsPractice fD = new methodsPractice();
+		methodsPractice f = new methodsPractice();
 //		sN.smallNumber();
 //		aN.avgNumber();
 //		System.out.printf("The middle character in the string: " + middleString());
@@ -296,7 +310,8 @@ public class methodsPractice {
 //		cD.checkDigit();
 //		cCI.checkConsecutiveInts();
 //		mP.midPoint();
-		fD.firstDigit();
+//		fD.firstDigit();
+		f.factor();
 	}
 
 }
