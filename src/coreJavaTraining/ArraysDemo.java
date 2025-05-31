@@ -58,16 +58,40 @@ public class ArraysDemo {
 		}
 		System.out.println(max);		
 	}
+	
+	public void interviewQ3() {
+		int abc[] [] = {{14,34,15},{10,41,72},{13,16,6}};
+		int min = abc[0][0];
+		int mincolumn = 0;
+		for(int i = 0; i<abc.length; i++) {
+			for(int j = 0; j<abc.length; j++) {
+				if(abc[i][j] < min) {
+					min = abc[i][j];
+					mincolumn = j;
+				}
+			}
+		}
+		
+		int k = 0;
+		int max = abc[0][mincolumn];
+		while(k<3) {
+			if(abc[k][mincolumn] > max) {
+				max = abc[k][mincolumn];
+			}
+			k++;
+		}
+		System.out.println(max);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+		sd.interviewQ3();
 		
 	}
 }
