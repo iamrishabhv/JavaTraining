@@ -23,6 +23,7 @@ public class ArraysDemo {
 		a[1] [0] = 4;
 		a[1] [1] = 3;
 		a[1] [2] = 6;
+//		int b[][] = {{2,3,5},{4,3,6}};
 		for(int i = 0; i<a.length; i++) {
 			for(int j = 0; j<a.length+1; j++) {
 				System.out.print(a[i][j]);
