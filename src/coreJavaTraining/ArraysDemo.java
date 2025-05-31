@@ -45,14 +45,28 @@ public class ArraysDemo {
 		}
 		System.out.println(min);		
 	}
+	
+	public void interviewQ2() {
+		int abc[] [] = {{14,34,15},{10,41,72},{13,16,6}};
+		int max = abc[0][0];
+		for(int i = 0; i<abc.length; i++) {
+			for(int j = 0; j<abc.length; j++) {
+				if(abc[i][j] > max) {
+					max = abc[i][j];
+				}
+			}
+		}
+		System.out.println(max);		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
+		sd.singleDimensional();
+		sd.multiDimensional();
 		sd.interviewQ1();
+		sd.interviewQ2();
 		
 		
 	}
