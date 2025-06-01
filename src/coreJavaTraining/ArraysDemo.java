@@ -82,6 +82,19 @@ public class ArraysDemo {
 		}
 		System.out.println(max);
 	}
+	
+	public void interviewQ4() {
+		int a[] = {5,3,1,3,4,2};
+		int dup = a[0];
+		for(int i = 0; i<a.length-1; i++) {
+			for(int j = i+1; j<a.length; j++) {
+				if(a[i] == a[j]) {
+					dup = a[j];
+				}
+			}
+		}
+		System.out.println(dup);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -91,7 +104,8 @@ public class ArraysDemo {
 //		sd.multiDimensional();
 //		sd.interviewQ1();
 //		sd.interviewQ2();
-		sd.interviewQ3();
+//		sd.interviewQ3();
+		sd.interviewQ4();
 		
 	}
 }
