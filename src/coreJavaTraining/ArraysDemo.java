@@ -100,11 +100,11 @@ public class ArraysDemo {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
-//		sd.interviewQ1();
-//		sd.interviewQ2();
-//		sd.interviewQ3();
+		sd.singleDimensional();
+		sd.multiDimensional();
+		sd.interviewQ1();
+		sd.interviewQ2();
+		sd.interviewQ3();
 		sd.interviewQ4();
 		
 	}
