@@ -95,17 +95,43 @@ public class ArraysDemo {
 		}
 		System.out.println(dup);
 	}
+	
+	public void InterviewQ5() {
+		int a[] = {2,4,1,6,7,8,3};
+		int temp;
+		for(int i = 0; i<a.length; i++) {
+			for(int j = i+1; j<a.length; j++) {
+				if(a[i] > a[j]) {
+					// Logic with temp variable
+//					temp = a[i];
+//					a[i] = a[j];
+//					a[j] = temp;
+					
+					//Logic without temp varibale
+					a[i] = a[i] + a[j];
+					a[j] = a[i] - a[j];
+					a[i] = a[i] - a[j];
+				}
+			}
+		}
+		
+		for(int i = 0; i<a.length; i++) {
+		System.out.print(a[i]);
+		System.out.print("\t");
+		}
+}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+		sd.InterviewQ5();
 		
 	}
 }
