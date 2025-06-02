@@ -142,6 +142,18 @@ public class ArraysDemo {
 			System.out.println();
 		}
 	}
+	
+	//Calculate average of array elements
+	public void PracticeQ3() {
+		float a[] = {2,4,1,6,7,8,3};
+		float sum = 0;
+		float avg;
+		for(int i = 0; i<a.length; i++) {
+			sum = sum+a[i];
+		}
+		avg = sum/a.length;
+		System.out.println(avg);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -156,6 +168,7 @@ public class ArraysDemo {
 		sd.InterviewQ5();
 		sd.PracticeQ1();
 		sd.PracticeQ2();
+		sd.PracticeQ3();
 		
 	}
 }
