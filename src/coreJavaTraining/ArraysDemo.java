@@ -120,6 +120,28 @@ public class ArraysDemo {
 		System.out.print("\t");
 		}
 }
+	
+	//Sum all values in an array
+	public void PracticeQ1() {
+		int a[] = {2,4,1,6,7,8,3};
+		int sum = 0;
+		for(int i = 0; i<a.length; i++) {
+			sum = sum+a[i];
+		}
+		System.out.println(sum);
+	}
+	
+	//Print a 10x10 grid of dashes
+	public void PracticeQ2() {
+		int a[][] = new int[10][10];
+		for(int i = 0; i<a.length; i++) {
+			for(int j = 0; j<a.length; j++) {
+				System.out.print("-");
+				System.out.print("\t");
+			}
+			System.out.println();
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -131,7 +153,9 @@ public class ArraysDemo {
 //		sd.interviewQ2();
 //		sd.interviewQ3();
 //		sd.interviewQ4();
-		sd.InterviewQ5();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+		sd.PracticeQ2();
 		
 	}
 }
