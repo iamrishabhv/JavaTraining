@@ -168,6 +168,7 @@ public class ArraysDemo {
 		System.out.printf("Value is present %d time(s) in the array", count);
 	}
 	
+	//Find index of an element in array
 	public void PracticeQ5() {
 		int[] a = {2,4,1,6,7,8,3};
 		int b = 7;
