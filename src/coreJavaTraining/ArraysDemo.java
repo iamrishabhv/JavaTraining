@@ -98,7 +98,7 @@ public class ArraysDemo {
 	
 	public void InterviewQ5() {
 		int a[] = {2,4,1,6,7,8,3};
-		int temp;
+//		int temp;
 		for(int i = 0; i<a.length; i++) {
 			for(int j = i+1; j<a.length; j++) {
 				if(a[i] > a[j]) {
@@ -154,21 +154,34 @@ public class ArraysDemo {
 		avg = sum/a.length;
 		System.out.println(avg);
 	}
+	
+	public void PracticeQ4() {
+		int a[] = {2,4,1,6,7,8,3};
+		int b[] = {6};
+		int count = 0;
+		for(int i = 0; i<a.length; i++) {
+				if(a[i] == b[0]) {
+					count = count+1;
+				}
+		}
+		System.out.printf("Value is present %d time(s) in the array", count);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
-		sd.InterviewQ5();
-		sd.PracticeQ1();
-		sd.PracticeQ2();
-		sd.PracticeQ3();
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+//		sd.PracticeQ2();
+//		sd.PracticeQ3();
+		sd.PracticeQ4();
 		
 	}
 }
