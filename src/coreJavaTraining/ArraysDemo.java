@@ -155,16 +155,30 @@ public class ArraysDemo {
 		System.out.println(avg);
 	}
 	
+	//Check if array contains a specific value
 	public void PracticeQ4() {
 		int a[] = {2,4,1,6,7,8,3};
-		int b[] = {6};
+		int b = 6;
 		int count = 0;
 		for(int i = 0; i<a.length; i++) {
-				if(a[i] == b[0]) {
+				if(a[i] == b) {
 					count = count+1;
 				}
 		}
 		System.out.printf("Value is present %d time(s) in the array", count);
+	}
+	
+	public void PracticeQ5() {
+		int[] a = {2,4,1,6,7,8,3};
+		int b = 7;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] == b) {
+				System.out.println(i);
+			}
+			else {
+				i = i+1;
+			}
+		}
 	}
 
 	public static void main(String[] args) {
@@ -181,7 +195,8 @@ public class ArraysDemo {
 //		sd.PracticeQ1();
 //		sd.PracticeQ2();
 //		sd.PracticeQ3();
-		sd.PracticeQ4();
+//		sd.PracticeQ4();
+		sd.PracticeQ5();
 		
 	}
 }
