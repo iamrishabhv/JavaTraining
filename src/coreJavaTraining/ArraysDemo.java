@@ -1,5 +1,7 @@
 package coreJavaTraining;
 
+import java.util.Arrays;
+
 public class ArraysDemo {
 	
 	public void singleDimensional() {
@@ -181,6 +183,17 @@ public class ArraysDemo {
 			}
 		}
 	}
+	
+	//Remove specific element from array
+	public void PracticeQ6() {
+		int[] a = {2,4,1,6,7,8,3};
+		int index = 3;
+		for(int i = index; i<a.length-1; i++) {
+			a[i] = a[i+1];			//Wrong Logic
+		}
+		System.out.println(Arrays.toString(a));
+	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -197,7 +210,8 @@ public class ArraysDemo {
 //		sd.PracticeQ2();
 //		sd.PracticeQ3();
 //		sd.PracticeQ4();
-		sd.PracticeQ5();
+//		sd.PracticeQ5();
+		sd.PracticeQ6();
 		
 	}
 }
