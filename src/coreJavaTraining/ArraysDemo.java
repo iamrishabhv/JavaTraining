@@ -187,31 +187,71 @@ public class ArraysDemo {
 	//Remove specific element from array
 	public void PracticeQ6() {
 		int[] a = {2,4,1,6,7,8,3};
-		int index = 3;
+		int index = 1;
 		for(int i = index; i<a.length-1; i++) {
 			a[i] = a[i+1];			//Wrong Logic
 		}
 		System.out.println(Arrays.toString(a));
 	}
 	
+	//Copy array using iteration
+	public void PracticeQ7() {
+		int[] a = {2,4,1,6,7,8,3};
+//		int[] b = Arrays.copyOf(a, a.length); 			//Method 2
+		int[] b = new int[a.length];
+		for(int i = 0; i<a.length; i++) {
+			b[i] = a[i];
+		}
+		System.out.println(Arrays.toString(b));
+	}
+	
+	//Replace an element at a specific position
+	public void PracticeQ8() {
+		int[] a = {2,4,1,6,7,8,3};
+		int b = 2;
+		int c = 9;
+		for(int i = b; i< b+1; i++) {
+			a[i] = c;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+	
+	public void PracticeQ9() {
+		int[] a = {2,4,1,6,7,8,3,12,56,97};
+		int max = a[0];
+		int min = a[0];
+		for (int i = 0; i<a.length; i++) {
+			if(a[i] < min) {
+				min = a[i];
+			}
+			if(a[i] > max) {
+				max = a[i];
+			}
+		}
+		System.out.printf("Min Value in the Array: %d%n",min);
+		System.out.printf("Max Value in the Array: %d%n",max);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
-//		sd.interviewQ1();
-//		sd.interviewQ2();
-//		sd.interviewQ3();
-//		sd.interviewQ4();
-//		sd.InterviewQ5();
-//		sd.PracticeQ1();
-//		sd.PracticeQ2();
-//		sd.PracticeQ3();
-//		sd.PracticeQ4();
-//		sd.PracticeQ5();
+		sd.singleDimensional();
+		sd.multiDimensional();
+		sd.interviewQ1();
+		sd.interviewQ2();
+		sd.interviewQ3();
+		sd.interviewQ4();
+		sd.InterviewQ5();
+		sd.PracticeQ1();
+		sd.PracticeQ2();
+		sd.PracticeQ3();
+		sd.PracticeQ4();
+		sd.PracticeQ5();
 		sd.PracticeQ6();
+		sd.PracticeQ7();
+		sd.PracticeQ8();
+		sd.PracticeQ9();
 		
 	}
 }
