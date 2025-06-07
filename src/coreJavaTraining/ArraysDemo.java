@@ -261,8 +261,8 @@ public class ArraysDemo {
 		System.out.println(b);
 }
 	
-	//Common elements in two string arrays
-	public void commonElements() {
+	//Common elements in two integer arrays
+	public void commonIntElements() {
 		int[] a = {3, 7, 8, 12, 15};
 		int[] b = {5, 8, 14, 20, 3};
 		int n = 0;
@@ -276,6 +276,23 @@ public class ArraysDemo {
 			}
 		}
 		System.out.printf("Common Elements: " + Arrays.toString(Arrays.copyOf(c, n)));
+	}
+	
+	//Common elements in two integer arrays
+	public void commonStringElements() {
+		String[] array1 = {"apple", "banana", "cherry", "mango", "peach"};
+		String[] array2 = {"grape", "melon", "apple", "kiwi", "cherry"};
+		int count = 0;
+		String[] array3 = new String[array1.length];
+		for(int i = 0; i<array1.length; i++) {
+			for(int j = 0; j<array2.length; j++) {
+				if(array1[i].equalsIgnoreCase(array2[j])) {
+					array3[count] = array1[i];
+					count++;
+				}
+			}
+		}
+		System.out.printf("Common Elements: " + Arrays.toString(Arrays.copyOf(array3, count)));
 	}
 
 	public static void main(String[] args) {
@@ -300,7 +317,8 @@ public class ArraysDemo {
 //		sd.PracticeQ9();
 //		sd.PracticeQ10();
 //		sd.dupStringArray();
-		sd.commonElements();
+//		sd.commonIntElements();
+		sd.commonStringElements();
 		
 	}
 }
