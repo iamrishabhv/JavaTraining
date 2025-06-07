@@ -85,6 +85,7 @@ public class ArraysDemo {
 		System.out.println(max);
 	}
 	
+	//Find duplicates in integer array
 	public void interviewQ4() {
 		int a[] = {5,3,1,3,4,2};
 		int dup = a[0];
@@ -216,6 +217,7 @@ public class ArraysDemo {
 		System.out.println(Arrays.toString(a));
 	}
 	
+	//Find max and min in an array
 	public void PracticeQ9() {
 		int[] a = {2,4,1,6,7,8,3,12,56,97};
 		int max = a[0];
@@ -231,6 +233,33 @@ public class ArraysDemo {
 		System.out.printf("Min Value in the Array: %d%n",min);
 		System.out.printf("Max Value in the Array: %d%n",max);
 	}
+	
+	//Reverse an integer array
+	public void PracticeQ10() {
+		int[] a = {2,4,1,6,7,8,3,12,56,97};
+		int[] b = new int[10];
+		int n = 0;
+		for(int i = a.length-1; i>=0 ; i--) {
+			b[n] = a[i];
+			n++;
+			}
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+		}
+	
+	//Find duplicates in string array
+	public void dupStringArray() {
+		String[] a = {"Car","Bike","Cycle","Truck","Bike"};
+		String b = a[0];
+		for(int i = 0; i<a.length-1; i++) {
+			for(int j = i+1; j<a.length; j++) {
+			if(a[i] == a[j]) {
+				b = a[j];
+			}
+		}
+	}
+		System.out.println(b);
+}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -252,6 +281,8 @@ public class ArraysDemo {
 		sd.PracticeQ7();
 		sd.PracticeQ8();
 		sd.PracticeQ9();
+		sd.PracticeQ10();
+		sd.dupStringArray();
 		
 	}
 }
