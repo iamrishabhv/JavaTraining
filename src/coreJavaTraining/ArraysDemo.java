@@ -294,6 +294,27 @@ public class ArraysDemo {
 		}
 		System.out.printf("Common Elements: " + Arrays.toString(Arrays.copyOf(array3, count)));
 	}
+	
+	//Remove duplicates from array
+	public void removeDup() {
+		int[] a = {4, 7, 2, 9, 4, 7, 1, 3, 2};
+		int n = 0;
+		int[] b = new int[a.length];
+		for(int i = 0; i < a.length; i++) {
+			boolean isDup = false;
+			for(int j = 0; j<n; j++) {
+				if(a[i] == b[j]) {
+					isDup = true;
+					break;
+				}
+			}
+			if(!isDup) {
+				b[n] = a[i];
+				n++;
+			}
+		}
+		System.out.printf(Arrays.toString(Arrays.copyOf(b, n)));
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -318,7 +339,8 @@ public class ArraysDemo {
 //		sd.PracticeQ10();
 //		sd.dupStringArray();
 //		sd.commonIntElements();
-		sd.commonStringElements();
+//		sd.commonStringElements();
+		sd.removeDup();
 		
 	}
 }
