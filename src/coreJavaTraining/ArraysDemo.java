@@ -260,29 +260,47 @@ public class ArraysDemo {
 	}
 		System.out.println(b);
 }
+	
+	//Common elements in two string arrays
+	public void commonElements() {
+		int[] a = {3, 7, 8, 12, 15};
+		int[] b = {5, 8, 14, 20, 3};
+		int n = 0;
+		int[] c = new int[a.length];
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < b.length; j++) {
+				if(a[i] == b[j]) {
+					c[n] = a[i];
+					n++;
+				}
+			}
+		}
+		System.out.printf("Common Elements: " + Arrays.toString(Arrays.copyOf(c, n)));
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
-		sd.InterviewQ5();
-		sd.PracticeQ1();
-		sd.PracticeQ2();
-		sd.PracticeQ3();
-		sd.PracticeQ4();
-		sd.PracticeQ5();
-		sd.PracticeQ6();
-		sd.PracticeQ7();
-		sd.PracticeQ8();
-		sd.PracticeQ9();
-		sd.PracticeQ10();
-		sd.dupStringArray();
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+//		sd.PracticeQ2();
+//		sd.PracticeQ3();
+//		sd.PracticeQ4();
+//		sd.PracticeQ5();
+//		sd.PracticeQ6();
+//		sd.PracticeQ7();
+//		sd.PracticeQ8();
+//		sd.PracticeQ9();
+//		sd.PracticeQ10();
+//		sd.dupStringArray();
+		sd.commonElements();
 		
 	}
 }
