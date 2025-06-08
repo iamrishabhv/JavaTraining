@@ -315,32 +315,68 @@ public class ArraysDemo {
 		}
 		System.out.printf(Arrays.toString(Arrays.copyOf(b, n)));
 	}
+	
+	//Find second largest array element
+	public void secondLargestElement() {
+		int[] a = {7, 9, 67, 4, 1, 3, 2, 10, 56, 12, 45, 98};
+		int max1 = 0;
+		int max2 = 0;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] > max1) {
+				max2 = max1;
+				max1 = a[i];				
+			}
+			if(a[i] > max2 && a[i] != max1) {
+				max2 = a[i];
+			}
+		}
+		System.out.printf("Second Largest Element in Array: %d%n",max2);
+	}
+	
+	//Find second smallest array element
+	public void secondSmallestElement() {
+		int[] a = {7, 9, 67, 4, 1, 3, 2, 10, 56, 12, 45, 98};
+		int min1 = 100;
+		int min2 = 100;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] < min1) {
+				min2 = min1;
+				min1 = a[i];
+			}
+			if(a[i] < min2 && a[i] != min1){
+				min2 = a[i];
+			}
+		}
+		System.out.printf("Second Smallest Element in Array: %d%n",min2);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
-//		sd.interviewQ1();
-//		sd.interviewQ2();
-//		sd.interviewQ3();
-//		sd.interviewQ4();
-//		sd.InterviewQ5();
-//		sd.PracticeQ1();
-//		sd.PracticeQ2();
-//		sd.PracticeQ3();
-//		sd.PracticeQ4();
-//		sd.PracticeQ5();
-//		sd.PracticeQ6();
-//		sd.PracticeQ7();
-//		sd.PracticeQ8();
-//		sd.PracticeQ9();
-//		sd.PracticeQ10();
-//		sd.dupStringArray();
-//		sd.commonIntElements();
-//		sd.commonStringElements();
+		sd.singleDimensional();
+		sd.multiDimensional();
+		sd.interviewQ1();
+		sd.interviewQ2();
+		sd.interviewQ3();
+		sd.interviewQ4();
+		sd.InterviewQ5();
+		sd.PracticeQ1();
+		sd.PracticeQ2();
+		sd.PracticeQ3();
+		sd.PracticeQ4();
+		sd.PracticeQ5();
+		sd.PracticeQ6();
+		sd.PracticeQ7();
+		sd.PracticeQ8();
+		sd.PracticeQ9();
+		sd.PracticeQ10();
+		sd.dupStringArray();
+		sd.commonIntElements();
+		sd.commonStringElements();
 		sd.removeDup();
+		sd.secondLargestElement();
+		sd.secondSmallestElement();
 		
 	}
 }
