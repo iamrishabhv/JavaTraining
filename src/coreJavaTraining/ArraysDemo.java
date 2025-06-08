@@ -349,34 +349,49 @@ public class ArraysDemo {
 		}
 		System.out.printf("Second Smallest Element in Array: %d%n",min2);
 	}
+	
+	//Add two same-size matrices
+	public void add2Matrices() {
+		int a[] [] = {{2,4,5},{3,4,7},{1,2,9}};
+		int b[] [] = {{5,3,7},{8,2,1},{9,5,6}};
+		int c[] [] = new int[3] [3];
+		for(int i = 0; i<a.length; i++) {
+			for(int j = 0; j<a.length; j++) {
+				c[i][j] = a[i][j] + b[i][j];
+				System.out.print(c[i][j]);
+				System.out.print("\t");
+			}
+			System.out.println();
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
-		sd.InterviewQ5();
-		sd.PracticeQ1();
-		sd.PracticeQ2();
-		sd.PracticeQ3();
-		sd.PracticeQ4();
-		sd.PracticeQ5();
-		sd.PracticeQ6();
-		sd.PracticeQ7();
-		sd.PracticeQ8();
-		sd.PracticeQ9();
-		sd.PracticeQ10();
-		sd.dupStringArray();
-		sd.commonIntElements();
-		sd.commonStringElements();
-		sd.removeDup();
-		sd.secondLargestElement();
-		sd.secondSmallestElement();
-		
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+//		sd.PracticeQ2();
+//		sd.PracticeQ3();
+//		sd.PracticeQ4();
+//		sd.PracticeQ5();
+//		sd.PracticeQ6();
+//		sd.PracticeQ7();
+//		sd.PracticeQ8();
+//		sd.PracticeQ9();
+//		sd.PracticeQ10();
+//		sd.dupStringArray();
+//		sd.commonIntElements();
+//		sd.commonStringElements();
+//		sd.removeDup();
+//		sd.secondLargestElement();
+//		sd.secondSmallestElement();
+		sd.add2Matrices();
 	}
 }
