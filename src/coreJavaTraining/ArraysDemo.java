@@ -1,6 +1,8 @@
 package coreJavaTraining;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ArraysDemo {
 	
@@ -364,34 +366,56 @@ public class ArraysDemo {
 			System.out.println();
 		}
 	}
+	
+	//Convert array to ArrayList
+	public void array2List() {
+		String[] a = {"Python", "JAVA", "PHP", "Perl", "C#", "C++"};
+		List<String> b = Arrays.asList(a);
+		System.out.println(b);
+	}
+	
+	//Convert ArrayList to array
+	public void List2Array() {
+		ArrayList<String> a = new ArrayList<>();
+		a.add("Python");
+		a.add("JAVA");
+		a.add("PHP");
+		a.add("Perl");
+		a.add("C#");
+		a.add("C++");
+		String[] b = a.toArray(new String[0]);
+		System.out.println(Arrays.toString(b));
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
-//		sd.interviewQ1();
-//		sd.interviewQ2();
-//		sd.interviewQ3();
-//		sd.interviewQ4();
-//		sd.InterviewQ5();
-//		sd.PracticeQ1();
-//		sd.PracticeQ2();
-//		sd.PracticeQ3();
-//		sd.PracticeQ4();
-//		sd.PracticeQ5();
-//		sd.PracticeQ6();
-//		sd.PracticeQ7();
-//		sd.PracticeQ8();
-//		sd.PracticeQ9();
-//		sd.PracticeQ10();
-//		sd.dupStringArray();
-//		sd.commonIntElements();
-//		sd.commonStringElements();
-//		sd.removeDup();
-//		sd.secondLargestElement();
-//		sd.secondSmallestElement();
+		sd.singleDimensional();
+		sd.multiDimensional();
+		sd.interviewQ1();
+		sd.interviewQ2();
+		sd.interviewQ3();
+		sd.interviewQ4();
+		sd.InterviewQ5();
+		sd.PracticeQ1();
+		sd.PracticeQ2();
+		sd.PracticeQ3();
+		sd.PracticeQ4();
+		sd.PracticeQ5();
+		sd.PracticeQ6();
+		sd.PracticeQ7();
+		sd.PracticeQ8();
+		sd.PracticeQ9();
+		sd.PracticeQ10();
+		sd.dupStringArray();
+		sd.commonIntElements();
+		sd.commonStringElements();
+		sd.removeDup();
+		sd.secondLargestElement();
+		sd.secondSmallestElement();
 		sd.add2Matrices();
+		sd.array2List();
+		sd.List2Array();
 	}
 }
