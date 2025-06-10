@@ -433,6 +433,24 @@ public class ArraysDemo {
 			}
 		}
 	}
+	
+	//Find missing number in array
+	public void missingNumber() {
+		int[] a = {7, 9, 67, 4, 5, 3, 2, 10, 5, 12, 45, 98};
+		int missing = 5;
+		ArrayList<Integer> b = new ArrayList<>();
+		for(int i = 0; i<a.length; i++) {
+			if(missing == a[i]) {
+				b.add(i);
+			}			
+		}
+		if(b.isEmpty()) {
+			System.out.println("Number is Missing from the Array");
+		}
+		else {
+			System.out.print("Number is Present at Index: " + b.toString());
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -466,5 +484,6 @@ public class ArraysDemo {
 		sd.List2Array();
 		sd.pairWithSum();
 		sd.check2Arrays();
+		sd.missingNumber();
 	}
 }
