@@ -386,36 +386,64 @@ public class ArraysDemo {
 		String[] b = a.toArray(new String[0]);
 		System.out.println(Arrays.toString(b));
 	}
+	
+	//Pairs with given sum
+	public void pairWithSum() {
+		try {
+		int[] a = {7, 9, 67, 4, 1, 3, 2, 10, 56, 12, 45, 98};
+		int sum = 68;
+		ArrayList<Integer> b = new ArrayList<>();
+		for(int i = 0; i<a.length; i++) {
+			for(int j = i+1; j<a.length; j++) {
+			if(a[i] + a[j] == sum) {
+				b.add(a[i]);
+				b.add(a[j]);
+			}
+			}
+		}
+		
+		if(b.isEmpty()) {
+			System.out.printf("No Pairs were found with sum %d", sum);
+		}
+		else {
+		System.out.println("Pairs with sum " + sum +": " + b);
+		}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			}
+		}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
-		sd.InterviewQ5();
-		sd.PracticeQ1();
-		sd.PracticeQ2();
-		sd.PracticeQ3();
-		sd.PracticeQ4();
-		sd.PracticeQ5();
-		sd.PracticeQ6();
-		sd.PracticeQ7();
-		sd.PracticeQ8();
-		sd.PracticeQ9();
-		sd.PracticeQ10();
-		sd.dupStringArray();
-		sd.commonIntElements();
-		sd.commonStringElements();
-		sd.removeDup();
-		sd.secondLargestElement();
-		sd.secondSmallestElement();
-		sd.add2Matrices();
-		sd.array2List();
-		sd.List2Array();
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+//		sd.PracticeQ2();
+//		sd.PracticeQ3();
+//		sd.PracticeQ4();
+//		sd.PracticeQ5();
+//		sd.PracticeQ6();
+//		sd.PracticeQ7();
+//		sd.PracticeQ8();
+//		sd.PracticeQ9();
+//		sd.PracticeQ10();
+//		sd.dupStringArray();
+//		sd.commonIntElements();
+//		sd.commonStringElements();
+//		sd.removeDup();
+//		sd.secondLargestElement();
+//		sd.secondSmallestElement();
+//		sd.add2Matrices();
+//		sd.array2List();
+//		sd.List2Array();
+		sd.pairWithSum();
 	}
 }
