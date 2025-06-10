@@ -413,6 +413,26 @@ public class ArraysDemo {
 			e.printStackTrace();
 			}
 		}
+	
+	//Check if two arrays are equal
+	public void check2Arrays() {
+		int[] a = {7, 9, 67, 4, 1, 3, 2, 10, 56, 12, 45, 98};
+		int[] b = {7, 9, 67, 4, 1, 3, 2, 10, 56, 12, 45, 98};
+		Arrays.sort(a);
+		Arrays.sort(b);		
+		if(a.length != b.length) {
+			System.out.println("Not Equal");
+		}
+		else {
+			boolean areEqual = Arrays.equals(a, b);
+			if(areEqual) {
+				System.out.println("Equal");
+			}
+			else {
+				System.out.println("Not at all Equal");
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -444,6 +464,7 @@ public class ArraysDemo {
 //		sd.add2Matrices();
 //		sd.array2List();
 //		sd.List2Array();
-		sd.pairWithSum();
+//		sd.pairWithSum();
+		sd.check2Arrays();
 	}
 }
