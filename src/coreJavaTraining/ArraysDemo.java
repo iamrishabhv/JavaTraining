@@ -451,39 +451,79 @@ public class ArraysDemo {
 			System.out.print("Number is Present at Index: " + b.toString());
 		}
 	}
+	
+	//Move all 0s to array end
+	public void moveZeros2End() {
+		int[] a = {7, 0, 0, 4, 0, 3, 2};
+		int pos = 0;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] != 0) {
+				a[pos] = a[i];
+				pos++;
+			}
+		}
+		while(pos < a.length) {
+			a[pos] = 0;
+			pos++;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+	
+	//Common elements in three sorted arrays
+	public void commonElements() {
+		int[] a = {7, 8, 10, 4, 14, 3, 2};
+		int[] b = {7, 1, 10, 4, 5, 13, 2};
+		int[] c = {7, 9, 0, 41, 10, 3, 2};
+		ArrayList<Integer> d = new ArrayList<>();
+		Arrays.sort(a);
+		Arrays.sort(b);
+		Arrays.sort(c);
+		for(int i = 0; i<a.length; i++) {
+			for(int j = 0; j<b.length; j++) {
+				for(int k = 0; k<c.length; k++) {
+					if(a[i] == b[j] && b[j] == c[k]) {
+						d.add(a[i]);
+					}
+				}
+			}
+		}
+		System.out.println(d.toString());
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-		sd.singleDimensional();
-		sd.multiDimensional();
-		sd.interviewQ1();
-		sd.interviewQ2();
-		sd.interviewQ3();
-		sd.interviewQ4();
-		sd.InterviewQ5();
-		sd.PracticeQ1();
-		sd.PracticeQ2();
-		sd.PracticeQ3();
-		sd.PracticeQ4();
-		sd.PracticeQ5();
-		sd.PracticeQ6();
-		sd.PracticeQ7();
-		sd.PracticeQ8();
-		sd.PracticeQ9();
-		sd.PracticeQ10();
-		sd.dupStringArray();
-		sd.commonIntElements();
-		sd.commonStringElements();
-		sd.removeDup();
-		sd.secondLargestElement();
-		sd.secondSmallestElement();
-		sd.add2Matrices();
-		sd.array2List();
-		sd.List2Array();
-		sd.pairWithSum();
-		sd.check2Arrays();
-		sd.missingNumber();
+//		sd.singleDimensional();
+//		sd.multiDimensional();
+//		sd.interviewQ1();
+//		sd.interviewQ2();
+//		sd.interviewQ3();
+//		sd.interviewQ4();
+//		sd.InterviewQ5();
+//		sd.PracticeQ1();
+//		sd.PracticeQ2();
+//		sd.PracticeQ3();
+//		sd.PracticeQ4();
+//		sd.PracticeQ5();
+//		sd.PracticeQ6();
+//		sd.PracticeQ7();
+//		sd.PracticeQ8();
+//		sd.PracticeQ9();
+//		sd.PracticeQ10();
+//		sd.dupStringArray();
+//		sd.commonIntElements();
+//		sd.commonStringElements();
+//		sd.removeDup();
+//		sd.secondLargestElement();
+//		sd.secondSmallestElement();
+//		sd.add2Matrices();
+//		sd.array2List();
+//		sd.List2Array();
+//		sd.pairWithSum();
+//		sd.check2Arrays();
+//		sd.missingNumber();
+//		sd.moveZeros2End();
+		sd.commonElements();
 	}
 }
