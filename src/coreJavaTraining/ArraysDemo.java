@@ -488,42 +488,42 @@ public class ArraysDemo {
 			}
 		}
 		System.out.println(d.toString());
-	}
+	}	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo sd = new ArraysDemo();
-//		sd.singleDimensional();
-//		sd.multiDimensional();
-//		sd.interviewQ1();
-//		sd.interviewQ2();
-//		sd.interviewQ3();
-//		sd.interviewQ4();
-//		sd.InterviewQ5();
-//		sd.PracticeQ1();
-//		sd.PracticeQ2();
-//		sd.PracticeQ3();
-//		sd.PracticeQ4();
-//		sd.PracticeQ5();
-//		sd.PracticeQ6();
-//		sd.PracticeQ7();
-//		sd.PracticeQ8();
-//		sd.PracticeQ9();
-//		sd.PracticeQ10();
-//		sd.dupStringArray();
-//		sd.commonIntElements();
-//		sd.commonStringElements();
-//		sd.removeDup();
-//		sd.secondLargestElement();
-//		sd.secondSmallestElement();
-//		sd.add2Matrices();
-//		sd.array2List();
-//		sd.List2Array();
-//		sd.pairWithSum();
-//		sd.check2Arrays();
-//		sd.missingNumber();
-//		sd.moveZeros2End();
+		sd.singleDimensional();
+		sd.multiDimensional();
+		sd.interviewQ1();
+		sd.interviewQ2();
+		sd.interviewQ3();
+		sd.interviewQ4();
+		sd.InterviewQ5();
+		sd.PracticeQ1();
+		sd.PracticeQ2();
+		sd.PracticeQ3();
+		sd.PracticeQ4();
+		sd.PracticeQ5();
+		sd.PracticeQ6();
+		sd.PracticeQ7();
+		sd.PracticeQ8();
+		sd.PracticeQ9();
+		sd.PracticeQ10();
+		sd.dupStringArray();
+		sd.commonIntElements();
+		sd.commonStringElements();
+		sd.removeDup();
+		sd.secondLargestElement();
+		sd.secondSmallestElement();
+		sd.add2Matrices();
+		sd.array2List();
+		sd.List2Array();
+		sd.pairWithSum();
+		sd.check2Arrays();
+		sd.missingNumber();
+		sd.moveZeros2End();
 		sd.commonElements();
 	}
 }
