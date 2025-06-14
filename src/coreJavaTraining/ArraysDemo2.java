@@ -1,6 +1,7 @@
 package coreJavaTraining;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysDemo2 {
@@ -93,6 +94,51 @@ public class ArraysDemo2 {
 			System.out.printf("The total sum of 10s in the Array is: %d%n", sum);
 		}
 	}
+	
+	//Separate 0s and 1s in an array of 0s and 1s
+	public void move01() {
+		int[] a = {0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1};
+		int pos = 0;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] != 1) {
+				a[pos] = a[i];
+				pos++;
+			}
+		}
+		while(pos < a.length) {
+			a[pos] = 1;
+			pos++;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+	
+	//Find smallest and second smallest in an array
+	public void smallest2() {
+		  int[] a = {4,1,1,2,5,2};
+		  Arrays.sort(a);
+		  if (a.length < 2) {
+		    System.out.printf("Not enough elements to find second smallest");
+		  }
+		  int min = Integer.MAX_VALUE;
+		  int min2 = Integer.MAX_VALUE;
+		  for (int i = 0; i < a.length; i++) {
+		    if (a[i] < min) {
+		      min2 = min;
+		      min = a[i];
+		    }
+		    if (a[i] > min && a[i] < min2) {
+		      min2 = a[i];
+		    }
+		  }
+		  
+		  if(min2 == Integer.MAX_VALUE) {
+			  System.out.printf("No Second Element");
+		  }
+		  else {
+		  System.out.printf("First Smallest Element is: %d%n", min);
+		  System.out.printf("Second Smallest Element is: %d%n", min2);
+		  }
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -102,7 +148,9 @@ public class ArraysDemo2 {
 //		ad.diffMinMax();
 //		ad.avgExMinMax();
 //		ad.natualNumberCheck();
-		ad.sumEqual30();
+//		ad.sumEqual30();
+//		ad.move01();
+		ad.smallest2();
 
 	}
 
