@@ -139,18 +139,36 @@ public class ArraysDemo2 {
 		  System.out.printf("Second Smallest Element is: %d%n", min2);
 		  }
 	}
+	
+	//Rotate an array clockwise by one position
+	public void arrayRotaion() {
+		int[] a = {1, 2, 3, 4, 5, 6};
+		int d = 1;
+		int pos = 0;
+		int num= 0;
+		while(pos < d) {
+			num = a[a.length-1];
+			for(int j = a.length-1; j>0; j--) {
+				a[j] = a[j-1];
+			}
+			a[0] = num;
+			pos++;
+		}
+		System.out.println(Arrays.toString(a));
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo2 ad = new ArraysDemo2();
-//		ad.evenOdd();
-//		ad.diffMinMax();
-//		ad.avgExMinMax();
-//		ad.natualNumberCheck();
-//		ad.sumEqual30();
-//		ad.move01();
+		ad.evenOdd();
+		ad.diffMinMax();
+		ad.avgExMinMax();
+		ad.natualNumberCheck();
+		ad.sumEqual30();
+		ad.move01();
 		ad.smallest2();
+		ad.arrayRotaion();
 
 	}
 
