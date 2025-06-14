@@ -1,5 +1,8 @@
 package coreJavaTraining;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ArraysDemo2 {
 	
 	//Count even and odd numbers in array
@@ -56,6 +59,40 @@ public class ArraysDemo2 {
 		float avg = (exMinMaxSum/(a.length-2));
 		System.out.printf("Average Excluding Max & Min of the Array is: %.1f%n", avg);
 	}
+	
+	//Check if array excludes 0 and -1
+	public void natualNumberCheck() {
+		int[] a = {7, -1, 10, 4, 14, 3, 0, 11, 12};
+		boolean containsZeroOrMinusOne = false;
+		for(int i = 0; i< a.length; i++) {
+			if(a[i] == 0 || a[i] == -1) {
+				containsZeroOrMinusOne = true;
+			}
+		}
+		if(!containsZeroOrMinusOne) {
+			System.out.println("Array does not contain 0 or -1");
+		}
+		else {
+			System.out.println("Array does contain 0 or -1");
+		}
+	}
+	
+	//Check if total of 10s equals 30
+	public void sumEqual30() {
+		int[] a = {11, 77, 10, 54, -11, 10};
+		int sum = 0;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] == 10) {
+				sum = sum + a[i];
+			}
+		}
+		if(sum == 30) {
+			System.out.printf("The total sum of 10s in the Array is: %d%n", sum);
+		}
+		else {
+			System.out.printf("The total sum of 10s in the Array is: %d%n", sum);
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -63,7 +100,9 @@ public class ArraysDemo2 {
 		ArraysDemo2 ad = new ArraysDemo2();
 //		ad.evenOdd();
 //		ad.diffMinMax();
-		ad.avgExMinMax();
+//		ad.avgExMinMax();
+//		ad.natualNumberCheck();
+		ad.sumEqual30();
 
 	}
 
