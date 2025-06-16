@@ -156,19 +156,60 @@ public class ArraysDemo2 {
 		}
 		System.out.println(Arrays.toString(a));
 	}
+	
+	//Separate even and odd numbers in an array
+	public void evenOddArray() {
+		int[] a = {7, 8, 10, 4, 14, 3, 2};
+		int pos = 0;
+		int[] b = new int[a.length];
+		Arrays.sort(a);
+		for(int i = 0; i<a.length; i++) {
+			if(a[i]%2==0) {
+				b[pos] = a[i];
+				pos++;
+			}
+		}
+		for(int i =0; i<a.length; i++) {
+			if(a[i]%2 != 0) {
+				b[pos] = a[i];
+				pos++;
+			}
+		}
+		System.out.println(Arrays.toString(b));
+	}
+	
+	//Find maximum product of two integers in an array
+	public void maxProduct() {
+		int[] nums = {7, 8, 10, 4, 14, 3, 2};
+		int x = 0;
+		int y = 0;
+		int pro = 0;
+		for(int i = 0; i<nums.length; i++) {
+			for(int j = i+1; j<nums.length; j++) {
+				if((nums[i] * nums[j] > pro) && (i != j)) {
+					x = nums[i];
+					y = nums[j];
+					pro = x*y;
+					}
+			}
+		}
+		System.out.printf("Pair is (%d,%d), Maximum Product: %d", x,y,pro);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo2 ad = new ArraysDemo2();
-		ad.evenOdd();
-		ad.diffMinMax();
-		ad.avgExMinMax();
-		ad.natualNumberCheck();
-		ad.sumEqual30();
-		ad.move01();
-		ad.smallest2();
-		ad.arrayRotaion();
+//		ad.evenOdd();
+//		ad.diffMinMax();
+//		ad.avgExMinMax();
+//		ad.natualNumberCheck();
+//		ad.sumEqual30();
+//		ad.move01();
+//		ad.smallest2();
+//		ad.arrayRotaion();
+//		ad.evenOddArray();
+		ad.maxProduct();
 
 	}
 
