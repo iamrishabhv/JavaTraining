@@ -180,7 +180,7 @@ public class ArraysDemo2 {
 	
 	//Find maximum product of two integers in an array
 	public void maxProduct() {
-		int[] nums = {7, 8, 10, 4, 14, 3, 2};
+		int[] nums = {17, 8, 10, 4, 14, 3, 21};
 		int x = 0;
 		int y = 0;
 		int pro = 0;
@@ -195,21 +195,36 @@ public class ArraysDemo2 {
 		}
 		System.out.printf("Pair is (%d,%d), Maximum Product: %d", x,y,pro);
 	}
+	
+	//Generate all permutations of a distinct integer array
+	public void permutationArray() {
+		int[] nums = {1, 2, 3, 4};
+		int c = 0;
+		for(int i = 0; i < nums.length; i++) {
+			for(int j = 0; j< nums.length-1; j++) {
+					c = nums[j+1];
+					nums[j+1] = nums[j];
+					nums[j] = c;
+					System.out.println(Arrays.toString(nums));
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo2 ad = new ArraysDemo2();
-//		ad.evenOdd();
-//		ad.diffMinMax();
-//		ad.avgExMinMax();
-//		ad.natualNumberCheck();
-//		ad.sumEqual30();
-//		ad.move01();
-//		ad.smallest2();
-//		ad.arrayRotaion();
-//		ad.evenOddArray();
+		ad.evenOdd();
+		ad.diffMinMax();
+		ad.avgExMinMax();
+		ad.natualNumberCheck();
+		ad.sumEqual30();
+		ad.move01();
+		ad.smallest2();
+		ad.arrayRotaion();
+		ad.evenOddArray();
 		ad.maxProduct();
+		ad.permutationArray();
 
 	}
 
