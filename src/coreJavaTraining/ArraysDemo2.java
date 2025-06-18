@@ -209,22 +209,52 @@ public class ArraysDemo2 {
 			}
 		}
 	}
+	
+	//Program to find the Number of 2's from 1 to 100
+	
+	public void find2() {
+		int count = 0;
+		for(int num = 1; num<=100; num++) {
+			int OnesDigit = num%10;
+			int TensDigit = (num/10)%10;
+			int HundredsDigit = (num/100)%10;
+			int ThousandsDigit = (num/1000)%10;
+			int TenThousandsDigit = (num/10000)%10;
+			if(OnesDigit == 2) {
+				count++;
+			}
+			if(TensDigit == 2) {
+				count++;
+			}
+			if(HundredsDigit == 2) {
+				count++;
+			}
+			if(ThousandsDigit == 2) {
+				count++;
+			}
+			if(TenThousandsDigit == 2) {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo2 ad = new ArraysDemo2();
-		ad.evenOdd();
-		ad.diffMinMax();
-		ad.avgExMinMax();
-		ad.natualNumberCheck();
-		ad.sumEqual30();
-		ad.move01();
-		ad.smallest2();
-		ad.arrayRotaion();
-		ad.evenOddArray();
-		ad.maxProduct();
-		ad.permutationArray();
+//		ad.evenOdd();
+//		ad.diffMinMax();
+//		ad.avgExMinMax();
+//		ad.natualNumberCheck();
+//		ad.sumEqual30();
+//		ad.move01();
+//		ad.smallest2();
+//		ad.arrayRotaion();
+//		ad.evenOddArray();
+//		ad.maxProduct();
+//		ad.permutationArray();
+		ad.find2();
 
 	}
 
