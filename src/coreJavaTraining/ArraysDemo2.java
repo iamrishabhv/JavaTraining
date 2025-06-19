@@ -238,23 +238,42 @@ public class ArraysDemo2 {
 		}
 		System.out.println(count);
 	}
+	
+	//Binary Array
+	public void binaryArray() {
+		int[] a = {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0};
+		int curr_len = 0;
+		int max_len = 0;
+		for(int i = 0; i<a.length; i++) {
+			if(a[i] == 0) {
+				curr_len++;
+			}
+			else {
+				max_len = Math.max(max_len, curr_len);
+				curr_len = 0;
+			}
+		}
+		max_len = Math.max(max_len, curr_len);
+		System.out.print(max_len);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		ArraysDemo2 ad = new ArraysDemo2();
-//		ad.evenOdd();
-//		ad.diffMinMax();
-//		ad.avgExMinMax();
-//		ad.natualNumberCheck();
-//		ad.sumEqual30();
-//		ad.move01();
-//		ad.smallest2();
-//		ad.arrayRotaion();
-//		ad.evenOddArray();
-//		ad.maxProduct();
-//		ad.permutationArray();
+		ad.evenOdd();
+		ad.diffMinMax();
+		ad.avgExMinMax();
+		ad.natualNumberCheck();
+		ad.sumEqual30();
+		ad.move01();
+		ad.smallest2();
+		ad.arrayRotaion();
+		ad.evenOddArray();
+		ad.maxProduct();
+		ad.permutationArray();
 		ad.find2();
+		ad.binaryArray();
 
 	}
 
