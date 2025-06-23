@@ -1,6 +1,7 @@
 package coreJavaTraining;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MathProblems {
 	
@@ -89,16 +90,43 @@ public class MathProblems {
         }
         System.out.println(count);
 	}
+	
+	//
+	public void ValidUserNameRegex() {
+		String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+		String MyRegex = "^[A-Za-z][A-Za-z0-9_]{7,29}$";
+		int l = s.length();
+		System.out.println(l);
+//		while(n != 0) {
+//			String s = sc.nextLine();
+			
+			if(s.matches(MyRegex)){
+				System.out.println("Valid");
+				}
+			else {
+				System.out.println("Invalid");
+				}
+//			n--;
+//			}
+		}
+	
+//	//Tag Content Extractor
+//	public void TagContentExtractor() {
+//		
+//	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MathProblems MP = new MathProblems();
-//		MP.P1();
-//		MP.MyRegex();
-//		MP.LeaderElement();
-//		MP.replace();
-//		MP.shiftChars();
+		MP.P1();
+		MP.MyRegex();
+		MP.LeaderElement();
+		MP.replace();
+		MP.shiftChars();
 		MP.IntReplace();
+		MP.ValidUserNameRegex();
 
 	}
 
