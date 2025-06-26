@@ -153,6 +153,24 @@ public class MathProblems {
         }
         System.out.println(hexString);
     }
+    
+    //Round Up Integer Division
+    public void M1() {
+    	int theory = 350;
+    	int practical = 90;
+    	int total = 500;
+    	int marks = ((theory+practical)*100)/total;
+    	System.out.println(marks);
+    }
+    
+    //Split Whole and Fractional Parts
+    public void M2() {
+    	double a = 9.234;
+    	double fractional_part = a%1;
+    	double whole_part = a - fractional_part;
+    	System.out.printf("Fractional Part is = %.3f%n", fractional_part);
+    	System.out.printf("Whole Part is = %.3f%n", whole_part);
+    }
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		// TODO Auto-generated method stub
@@ -165,7 +183,9 @@ public class MathProblems {
 //		MP.IntReplace();
 //		MP.ValidUserNameRegex();
 //		MP.TagContentExtractor();
-		MP.hashFunction();
+//		MP.hashFunction();
+//		MP.M1();
+		MP.M2();
 
 	}
 
