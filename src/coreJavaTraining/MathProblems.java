@@ -11,6 +11,8 @@ import java.util.regex.Pattern;
 
 public class MathProblems {
 	
+	public static final Scanner sc = new Scanner(System.in);
+	
 	//Round Up Integer Division
 	public void P1() {
 		int a = 345;
@@ -139,7 +141,6 @@ public class MathProblems {
 		}
 	
 	//SHA Hash Function
-	Scanner sc = new Scanner(System.in);
     
     public void hashFunction() throws NoSuchAlgorithmException{
 //            String s = sc.nextLine();
@@ -165,27 +166,72 @@ public class MathProblems {
     
     //Split Whole and Fractional Parts
     public void M2() {
-    	double a = 9.234;
+//    	Scanner sc = new Scanner(System.in);
+    	double a = sc.nextDouble();
     	double fractional_part = a%1;
     	double whole_part = a - fractional_part;
     	System.out.printf("Fractional Part is = %.3f%n", fractional_part);
     	System.out.printf("Whole Part is = %.3f%n", whole_part);
     }
+    
+    //Check if Double is Integer
+    public void M3() {
+//    	Scanner sc = new Scanner(System.in);
+    	double a = sc.nextDouble();
+    	if(a%1 == 0) {
+    		System.out.printf("It's not a double number");
+    	}
+    	else {
+    		System.out.printf("It's a double number");
+    	}
+    }
+    
+    //Count Absolute Distinct Values in Array
+    public void M4() {
+    	int[] a = {-1, -1, 0, 2, 2, 3, 0, 1, 5, 9};
+    	int count = 0;
+    	for(int i = 0; i<a.length; i++) {
+    		boolean isUnique = true;
+    		for(int j = 0; j<i; j++) {
+    			if(Math.abs(a[i]) == Math.abs(a[j])) {
+    				isUnique = false;
+    				break;
+    			}
+    		}
+    		if(isUnique) {
+				count++;
+		}
+    	}
+    	System.out.println(count);
+    }
+    
+    //Reverse an Integer
+    public void M5() {
+    	System.out.print("Enter your Number: ");
+    	int a = sc.nextInt();
+    	String s = Integer.toString(a);
+    	char[] c = s.toCharArray();
+    	for(int i = c.length-1; i>=0; i--) {
+    		System.out.print(c[i]);
+    	}    	
+    }
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
-		// TODO Auto-generated method stub
 		MathProblems MP = new MathProblems();
-//		MP.P1();
-//		MP.MyRegex();
-//		MP.LeaderElement();
-//		MP.replace();
-//		MP.shiftChars();
-//		MP.IntReplace();
-//		MP.ValidUserNameRegex();
-//		MP.TagContentExtractor();
-//		MP.hashFunction();
-//		MP.M1();
+		MP.P1();
+		MP.MyRegex();
+		MP.LeaderElement();
+		MP.replace();
+		MP.shiftChars();
+		MP.IntReplace();
+		MP.ValidUserNameRegex();
+		MP.TagContentExtractor();
+		MP.hashFunction();
+		MP.M1();
 		MP.M2();
+		MP.M3();
+		MP.M4();
+		MP.M5();
 
 	}
 
