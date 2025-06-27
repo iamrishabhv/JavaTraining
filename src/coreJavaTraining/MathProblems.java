@@ -215,23 +215,88 @@ public class MathProblems {
     		System.out.print(c[i]);
     	}    	
     }
+    
+    //Roman to Integer Conversion
+    public void M6() {
+    	String s = "DCCVII";
+    	int len = s.length();
+    	String str = s + " ";
+    	int result = 0;
+    	for(int i = 0; i<len; i++) {
+    		char ch1 = str.charAt(i);
+    		char ch2 = str.charAt(i+1);
+    		
+    		if(ch1 == 'M') {
+    			result = result + 1000;
+    		} else if(ch1 == 'C') {
+    			if(ch2 == 'M') {
+    				result = result + 900;
+    				i++;
+    			}
+    			else if(ch2 == 'D') {
+    				result = result + 400;
+    				i++;
+    			}
+    			else {
+    				result  = result + 100;
+    			}
+    		}
+    		else if(ch1 == 'D') {
+    			result = result + 500;
+    		}
+    		else if(ch1 == 'X') {
+    			if(ch2 == 'C') {
+    				result = result + 90;
+    				i++;
+    			}
+    			else if(ch2 == 'L') {
+    				result = result + 40;
+    				i++;
+    			}
+    			else {
+    				result = result + 10;
+    			}
+    		}
+    		else if(ch1 == 'L') {
+    			result = result + 50;
+    		}
+    		else if(ch1 == 'I') {
+    			if(ch2 == 'X') {
+    				result = result + 9;
+    				i++;
+    			}
+    			else if(ch2 == 'V') {
+    				result = result + 4;
+    				i++;
+    			}
+    			else {
+    				result = result + 1;
+    			}
+    		}
+    		else {
+    			result = result + 5;
+    		}
+    	}
+    	System.out.println(result);
+    }
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
-		MP.P1();
-		MP.MyRegex();
-		MP.LeaderElement();
-		MP.replace();
-		MP.shiftChars();
-		MP.IntReplace();
-		MP.ValidUserNameRegex();
-		MP.TagContentExtractor();
-		MP.hashFunction();
-		MP.M1();
-		MP.M2();
-		MP.M3();
-		MP.M4();
-		MP.M5();
+//		MP.P1();
+//		MP.MyRegex();
+//		MP.LeaderElement();
+//		MP.replace();
+//		MP.shiftChars();
+//		MP.IntReplace();
+//		MP.ValidUserNameRegex();
+//		MP.TagContentExtractor();
+//		MP.hashFunction();
+//		MP.M1();
+//		MP.M2();
+//		MP.M3();
+//		MP.M4();
+//		MP.M5();
+		MP.M6();
 
 	}
 
