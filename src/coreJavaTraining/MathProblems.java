@@ -5,6 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -279,7 +281,88 @@ public class MathProblems {
     	}
     	System.out.println(result);
     }
+    //Alternate Method for Roman to Integer Conversion
+    public void M6_1(String s) {
+    	Map<Character,Integer> roman = new HashMap<>();
+    	roman.put('I',1);
+    	roman.put('V',5);
+    	roman.put('X',10);
+    	roman.put('L',50);
+    	roman.put('C',100);
+    	roman.put('D',500);
+    	roman.put('M',1000);
+    	int result = 0;
+    	for(int i = 0; i<s.length(); i++) {
+    		int curr = roman.get(s.charAt(i));
+    		int next = (i + 1 < s.length()) ? roman.get(s.charAt(i+1)) : 0;
+    		
+    		if(curr < next) {
+    			result = result - curr;
+    		}
+    		else {
+    			result = result + curr;
+    		}
+    	}
+    	System.out.println(result);
+    }
+    
+    //Integer to Absolute Value
+    public void M7() {
+    	int a = sc.nextInt();
+    	int abs_value = (a >= 0) ? a : -a;
+    	System.out.println(abs_value);
+    }
+    
+    //Float to Absolute Value
+    public void M8() {
+    	float a = sc.nextFloat();
+    	float abs_value = (a>=0) ? a : -a;
+    	System.out.println(abs_value);
+    }
+    
+    //Round Float Value
+    public void M9() {
+    	float a = sc.nextFloat();
+    	float round_a = Math.round(a);
+    	System.out.println(round_a);
+    }
+    
+    //Check for 15 Condition
+    public void M10() {
+    	System.out.print("Enter the first Number: ");
+    	int a = sc.nextInt();
+    	System.out.print("Enter the second Number: ");
+    	int b = sc.nextInt();
+    	if(a + b == 15 || Math.abs(a - b) == 15 || a == 15 || b == 15) {
+    		System.out.println("Neither Sum, Difference or any of the number is 15");
+    	}
+    	else {
+    		System.out.println("The Sum/Difference or Any one of the number is 15");
+    	}
+    }
+    
+    //Count Primes Below Number
+	public void M11(){
+		int a = sc.nextInt();
+		int count = 0;
+		for(int num = 2; num <= a; num++) {
+			boolean isPrime = true;
+			
+			for(int i = 2; i<=Math.sqrt(num); i++) {
+				if(num % i == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			
+			if(isPrime) {
+				count++;
+				}
+			}
+		System.out.println(count);
+		}
 
+	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
 //		MP.P1();
@@ -296,7 +379,13 @@ public class MathProblems {
 //		MP.M3();
 //		MP.M4();
 //		MP.M5();
-		MP.M6();
+//		MP.M6();
+//		MP.M6_1("MCMXCIV");
+//		MP.M7();
+//		MP.M8();
+//		MP.M9();
+//		MP.M10();
+		MP.M11();
 
 	}
 
