@@ -361,7 +361,27 @@ public class MathProblems {
 			}
 		System.out.println(count);
 		}
-
+	
+	//Longest Binary Zero Sequence When a Integer is Inputed
+	public void M12() {
+		System.out.print("Enter your Integer: ");
+		int num = sc.nextInt();
+		String a = Integer.toBinaryString(num);
+		char[] c = a.toCharArray();
+		int len = a.length();
+		int curr_len = 0;
+		int max_len = 0;
+		for(int i = 0; i<len; i++) {
+			if(c[i] == '1') {
+				curr_len = 0;
+			}
+			if(c[i] == '0'){
+				curr_len++;
+				max_len = Integer.max(curr_len,max_len);
+				}
+			}
+		System.out.print(max_len);
+		}
 	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
@@ -385,7 +405,8 @@ public class MathProblems {
 //		MP.M8();
 //		MP.M9();
 //		MP.M10();
-		MP.M11();
+//		MP.M11();
+		MP.M12();
 
 	}
 
