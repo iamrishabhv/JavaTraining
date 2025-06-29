@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -395,6 +396,42 @@ public class MathProblems {
 		System.out.println(x);
 	}
 	
+	//Multiply Without Operators
+	public static int multiply(int a, int b) {
+		if(b < 0) {
+			return -multiply(a,-b);
+		}
+		if(b == 0) {
+			return 0;
+		}
+		return a + multiply(a, b-1);
+	}
+	
+	public void M14() {
+		int a = 5;
+		int b = 6;
+		int result = multiply(a,b);
+		System.out.println(result);
+	}
+	
+	//Stream Average Calculation
+	public void M15() {
+		System.out.print("Enter the number of Integers: ");
+		int n = sc.nextInt();
+		System.out.println("Enter the Numbers: ");
+		int[] numbers = new int[n];
+		for(int i = 0; i<n; i++) {
+			numbers[i] = sc.nextInt();
+		}
+		int sum = 0;
+		for(int j = 0; j<numbers.length; j++) {
+			sum = sum + numbers[j];
+		}
+		int avg = sum/n;
+		System.out.printf("The average is: %d",avg);
+		
+	}
+	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
 //		MP.P1();
@@ -419,7 +456,9 @@ public class MathProblems {
 //		MP.M10();
 //		MP.M11();
 //		MP.M12();
-		MP.M13();
+//		MP.M13();
+//		MP.M14();
+		MP.M15();
 
 	}
 
