@@ -449,6 +449,25 @@ public class MathProblems {
 		System.out.println(count);
 		}
 	
+	//Fibonacci Number Series
+	public void M17() {
+		int num = sc.nextInt();
+		int a = 0;
+		int b = 1;
+		int n = 0;
+		System.out.print(a);
+		System.out.print("\t");
+		System.out.print(b);
+		System.out.print("\t");
+		for(int i = 0; i<=num; i++) {
+			n = a + b;
+			System.out.print(n);
+			System.out.print("\t");
+			a = b;
+			b = n;
+		}
+	}
+	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
 //		MP.P1();
@@ -476,7 +495,8 @@ public class MathProblems {
 //		MP.M13();
 //		MP.M14();
 //		MP.M15();
-		MP.M16();
+//		MP.M16();
+		MP.M17();
 
 	}
 
