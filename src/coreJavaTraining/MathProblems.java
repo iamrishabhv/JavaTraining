@@ -383,6 +383,18 @@ public class MathProblems {
 		System.out.print(max_len);
 		}
 	
+	//Babylonian Square Root
+	public void M13() {
+		System.out.print("Enter the number: ");
+		float num = sc.nextFloat();
+		float x = num/2;
+		double e = 0.0001;
+		while(Math.abs(x * x - num) > e) {
+			x = (x + num/x)/2;
+		}
+		System.out.println(x);
+	}
+	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
 //		MP.P1();
@@ -406,7 +418,8 @@ public class MathProblems {
 //		MP.M9();
 //		MP.M10();
 //		MP.M11();
-		MP.M12();
+//		MP.M12();
+		MP.M13();
 
 	}
 
