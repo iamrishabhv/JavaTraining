@@ -432,6 +432,23 @@ public class MathProblems {
 		
 	}
 	
+	//Count Numbers Without 7
+	public static boolean notContains7(int n) {
+		String s = Integer.toString(n);
+		return s.contains("7");
+	}
+	
+	public void M16() {
+		int n = sc.nextInt();
+		int count = 0;
+		for(int i = 1; i<=n; i++) {
+			if(!notContains7(i)) {
+				count++;
+				}
+			}
+		System.out.println(count);
+		}
+	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		MathProblems MP = new MathProblems();
 //		MP.P1();
@@ -458,7 +475,8 @@ public class MathProblems {
 //		MP.M12();
 //		MP.M13();
 //		MP.M14();
-		MP.M15();
+//		MP.M15();
+		MP.M16();
 
 	}
 
