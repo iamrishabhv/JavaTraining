@@ -1,6 +1,8 @@
 package coreJavaTraining;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -43,13 +45,21 @@ public class CalendarDemo {
 	
 	//Calculate Age
 	public void calAge() {
-		int year = 1995;
-		int day = 21;
-		int month = 6;
-		int age_year = cal.get(Calendar.YEAR) - year;
-		int age_month = cal.get(Calendar.MONTH) - month;
-		int age_day = cal.get(Calendar.DATE) - day;
-		System.out.printf("Age is %d Years %d Months %d Days", age_year, age_month, age_day);
+		System.out.print("Enter your Birth Year: ");
+		int year = sc.nextInt();
+		System.out.print("Enter your Birth Day: ");
+		int day = sc.nextInt();
+		System.out.print("Enter your Birth Month: ");
+		int month = sc.nextInt();
+		
+		LocalDate birthDate =  LocalDate.of(year, month, day);
+		LocalDate currentDate = LocalDate.now();
+//		int age_mon = cal.get(Calendar.MONTH);
+//		int age_year = cal.get(Calendar.YEAR) - year;
+//		int age_month = (cal.get(Calendar.MONTH)+1) - month;
+//		int age_day = cal.get(Calendar.DATE) - day;
+		Period age = Period.between(birthDate, currentDate);
+		System.out.printf("Age is %d Years %d Months %d Days", age.getYears(), age.getMonths(), age.getDays());
 	}
 
 	public static void main(String[] args) {
