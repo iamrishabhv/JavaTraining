@@ -61,6 +61,34 @@ public class CalendarDemo {
 		Period age = Period.between(birthDate, currentDate);
 		System.out.printf("Age is %d Years %d Months %d Days", age.getYears(), age.getMonths(), age.getDays());
 	}
+	
+	//Last Day of Current Month
+	public void LastDayCurrMon() {
+		int last_day = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int last_date = cal.getActualMaximum(Calendar.DATE);
+		System.out.printf("Last Day of the Current Month is: %d%n",last_day);
+		System.out.printf("Last Date of the Month is: %d%n",last_date);
+	}
+	
+	//Write a Java program to count the number of days between two given years
+	public void NumberOfDaysBWYears() {
+		System.out.print("Enter the First Year: ");
+		int year1 = sc.nextInt();
+		System.out.print("Enter the Second Year: ");
+		int year2 = sc.nextInt();
+		int count = 0;
+		if(year1 > year2) {
+			System.out.print("First Year Cannot be Greater than Second Year");
+		}
+		else {
+		for(int i = year1; i<=year2; i++) {
+			cal.set(Calendar.YEAR, i);
+			cal.set(Calendar.DAY_OF_YEAR, 1);
+			count = count + cal.getActualMaximum(Calendar.DAY_OF_YEAR);
+		}
+		System.out.printf("The number of days between %d and %d are: %d%n",year1,year2,count);
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -75,7 +103,9 @@ public class CalendarDemo {
 //		c.datefromcalendar();
 //		c.LeapYear();
 //		c.LeapYearPrinter();
-		c.calAge();
+//		c.calAge();
+//		c.LastDayCurrMon();
+		c.NumberOfDaysBWYears();
 
 	}
 
