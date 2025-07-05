@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -100,8 +102,17 @@ public class CalendarDemo {
 		DateTimeFormatter tf = DateTimeFormatter.ofPattern("HH:mm:ss");		//hh:mm:ss for 12-Hour Format
 		String d = df.format(ld);
 		String t = tf.format(lt);
-		System.out.println(d);
-		System.out.println(t);
+		System.out.printf("Local Date is: %s%n", d);
+		System.out.printf("Local Time is: %s%n", t);
+	}
+	
+	//Write a Java program to print ZonedDateTime E MMM yyyy HH:mm:ss.SSSZ
+	public void PrintZonedDateTime() {
+		ZoneId zone1 = ZoneId.of("Australia/Sydney");
+		ZonedDateTime zdt = ZonedDateTime.now(zone1);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("E MMM yyyy HH:mm:ss.SSSZ");
+		String dt = dtf.format(zdt);
+		System.out.printf("Zoned Date Time is: %s%n", dt);		
 	}
 
 	public static void main(String[] args) {
@@ -120,7 +131,8 @@ public class CalendarDemo {
 //		c.calAge();
 //		c.LastDayCurrMon();
 //		c.NumberOfDaysBWYears();
-		c.PrintLocalDate();
+//		c.PrintLocalDate();
+		c.PrintZonedDateTime();
 
 	}
 
