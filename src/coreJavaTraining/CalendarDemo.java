@@ -2,7 +2,9 @@ package coreJavaTraining;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -89,6 +91,18 @@ public class CalendarDemo {
 		System.out.printf("The number of days between %d and %d are: %d%n",year1,year2,count);
 		}
 	}
+	
+	//Write a Java program to print LocalDate yyyy-MM-dd and LocalTime HH:mm:ss
+	public void PrintLocalDate() {
+		LocalDate ld = LocalDate.now();
+		LocalTime lt = LocalTime.now();
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter tf = DateTimeFormatter.ofPattern("HH:mm:ss");		//hh:mm:ss for 12-Hour Format
+		String d = df.format(ld);
+		String t = tf.format(lt);
+		System.out.println(d);
+		System.out.println(t);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -105,7 +119,8 @@ public class CalendarDemo {
 //		c.LeapYearPrinter();
 //		c.calAge();
 //		c.LastDayCurrMon();
-		c.NumberOfDaysBWYears();
+//		c.NumberOfDaysBWYears();
+		c.PrintLocalDate();
 
 	}
 
