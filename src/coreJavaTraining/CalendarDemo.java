@@ -11,7 +11,9 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.TimeZone;
 
 public class CalendarDemo {
 	
@@ -126,6 +128,18 @@ public class CalendarDemo {
 		System.out.print(ot);
 	}
 	
+	//Write a Java program to get seconds since 1970
+	public void SecondsSince1970() {
+		long lt = System.currentTimeMillis()/1000;
+		System.out.println("Seconds since 1970 = "+lt);
+		
+		Date date = new Date(lt*1000L);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT+5:30"));
+		String dt = sdf.format(date);
+		System.out.println(dt);
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -144,7 +158,8 @@ public class CalendarDemo {
 //		c.NumberOfDaysBWYears();
 //		c.PrintLocalDate();
 //		c.PrintZonedDateTime();
-		c.OffSetTime();
+//		c.OffSetTime();
+		c.SecondsSince1970();
 
 	}
 
