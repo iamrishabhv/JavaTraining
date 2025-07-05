@@ -1,5 +1,6 @@
 package coreJavaTraining;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -140,7 +141,16 @@ public class CalendarDemo {
 		System.out.println(dt);
 	}
 	
-	public static void main(String[] args) {
+	//Write a Java program to extract date, time from the date string
+	public void ExtractDateTime() throws ParseException {
+		String Date = "05-07-2025 19:47:00";
+		Date sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse(Date);
+		System.out.println(sdf);
+		String new_str = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss a").format(sdf);
+		System.out.println(new_str);
+	}
+	
+	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
 		
 //		Calendar cal = Calendar.getInstance();
@@ -159,7 +169,8 @@ public class CalendarDemo {
 //		c.PrintLocalDate();
 //		c.PrintZonedDateTime();
 //		c.OffSetTime();
-		c.SecondsSince1970();
+//		c.SecondsSince1970();
+		c.ExtractDateTime();
 
 	}
 
