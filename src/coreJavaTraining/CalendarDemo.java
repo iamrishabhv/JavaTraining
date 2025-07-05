@@ -3,8 +3,11 @@ package coreJavaTraining;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.OffsetDateTime;
+import java.time.OffsetTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -115,6 +118,14 @@ public class CalendarDemo {
 		System.out.printf("Zoned Date Time is: %s%n", dt);		
 	}
 
+	//Write a Java program to print OffsetTime HH:mm:ss,Z
+	public void OffSetTime() {
+		LocalTime lt = LocalTime.now();
+		ZoneOffset zoneoffset = ZoneOffset.of("+10:00");
+		OffsetTime ot = OffsetTime.of(lt, zoneoffset);
+		System.out.print(ot);
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -132,7 +143,8 @@ public class CalendarDemo {
 //		c.LastDayCurrMon();
 //		c.NumberOfDaysBWYears();
 //		c.PrintLocalDate();
-		c.PrintZonedDateTime();
+//		c.PrintZonedDateTime();
+		c.OffSetTime();
 
 	}
 
