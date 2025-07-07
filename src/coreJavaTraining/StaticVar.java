@@ -4,12 +4,20 @@ public class StaticVar {
 	
 	String name;		//Instance Variables
 	String address;
-	static String city = "New Delhi";		//Class Variable
+	static String city;		//Class Variable
+	static int i;			//Static Variable
+	
+	static {							//Static Block
+		city = "New Delhi";
+		i = 0;
+	}
 	
 	StaticVar(String name, String address){
 		this.name = name;
 		this.address = address;
 		this.city = city;
+		i++;
+		System.out.println(i);
 	}
 	
 	public void getAddress() {
@@ -18,8 +26,10 @@ public class StaticVar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		StaticVar sv = new StaticVar("Rishabh","Chattarpur");
-		sv.getAddress();
+		StaticVar sv1 = new StaticVar("Rishabh","Chattarpur");
+		StaticVar sv2 = new StaticVar("Shivani","Chattarpur");
+		sv1.getAddress();
+		sv2.getAddress();
 
 	}
 
