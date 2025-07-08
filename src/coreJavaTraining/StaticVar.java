@@ -13,7 +13,7 @@ public class StaticVar {
 	}
 	
 	StaticVar(String name, String address){
-		this.name = name;
+		this.name = name;			//this keyword is use to call instance variable in the current class.
 		this.address = address;
 		this.city = city;
 		i++;
