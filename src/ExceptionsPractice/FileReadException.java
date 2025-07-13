@@ -11,7 +11,7 @@ public class FileReadException {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			File file = new File("/coreJavaTraining/src/Resources/file.txt");
+			File file = new File("src/Resources/file.txt");
 			Scanner sc = new Scanner(file);
 			while(sc.hasNextLine()) {
 				System.out.println(sc.nextLine());
