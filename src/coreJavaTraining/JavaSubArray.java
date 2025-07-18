@@ -19,7 +19,7 @@ public class JavaSubArray {
 			for(int p = m; p<arr.length; p++) {
 				sum = sum + arr[p];
 				if(sum < 0) {
-					System.out.println(arr[m] + "," + arr[p]);
+					System.out.println("(" + arr[m] + "," + arr[p] + ")");
 					count++;
 				}
 			}
