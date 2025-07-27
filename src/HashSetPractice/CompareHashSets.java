@@ -24,12 +24,16 @@ public class CompareHashSets {
 			if(name.isEmpty()) break;
 			HS2.add(name);
 		}
-		
-		if(HS1.equals(HS2)) {
-			System.out.println("Both sets are EQUAL!");
-		}
-		else {
-			System.out.println("Both sets are NOT equal!");
+		System.out.println("1st Hash Set: " + HS1);
+		System.out.println("2nd Hash Set: " + HS2);
+//		if(HS1.equals(HS2)) {
+//			System.out.println("Both sets are EQUAL!");
+//		}
+//		else {
+//			System.out.println("Both sets are NOT equal!");
+//		}
+		for(String element : HS1) {
+			System.out.println(HS2.contains(element) ? "Yes" : "No");
 		}
 	}
 
@@ -40,3 +44,8 @@ public class CompareHashSets {
 	}
 
 }
+
+/*
+ * Use equals() when comparing two objects.
+ * Use contains() when checking if a collection holds an object.
+ */
