@@ -50,12 +50,49 @@ public class HashMapMapping {
 		int size = HM.size();
 		System.out.println("Size of HashMap is: " + size);
 	}
+	
+	/*Write a Java program to copy all mappings from the specified map to another map.*/
+	
+	public void copyMapping() {
+		HashMap<String, Integer> HM1 = new HashMap<String, Integer>();
+		System.out.println("Enter the number of entries: ");
+		int n1 = sc.nextInt();
+		sc.nextLine();
+		for(int i = 0; i<n1; i++) {
+			System.out.println("Enter the Key: ");
+			String key = sc.nextLine();
+			
+			System.out.println("Enter the Value: ");
+			int value = sc.nextInt();
+			sc.nextLine();
+			
+			HM1.put(key, value);
+		}
+		
+		HashMap<String, Integer> HM2 = new HashMap<String, Integer>();
+		System.out.println("Enter the number of entries: ");
+		int n2 = sc.nextInt();
+		sc.nextLine();
+		for(int i = 0; i<n2; i++) {
+			System.out.println("Enter the Key: ");
+			String key = sc.nextLine();
+			
+			System.out.println("Enter the Value: ");
+			int value = sc.nextInt();
+			sc.nextLine();
+			
+			HM2.put(key, value);
+		}
+		HM2.putAll(HM1);
+		System.out.println(HM2);
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HashMapMapping HMM = new HashMapMapping();
 		HMM.getKeyValue();
 		HMM.getHashMapSize();
+		HMM.copyMapping();
 
 	}
 
