@@ -86,13 +86,45 @@ public class HashMapMapping {
 		HM2.putAll(HM1);
 		System.out.println(HM2);
 	}
+	
+	/*Write a Java program to remove all mappings from a map.*/
+	
+	public void removeAllMapping() {
+		HashMap<String, Integer> HM = new HashMap<String, Integer>();
+		System.out.print("Enter the number of entries: ");
+		int n = sc.nextInt();
+		sc.nextLine();
+		for(int i = 0; i<n; i++) {
+			String name = sc.nextLine();
+			System.out.println("Enter the Key: ");
+			String key = sc.nextLine();
+			
+			System.out.println("Enter the Value: ");
+			int value = sc.nextInt();
+			sc.nextLine();
+			
+			HM.put(key, value);
+		}
+		System.out.print("Current Entries in HashMap are: " + HM);
+		System.out.println("Do you want to remove all entries from HashMap? (Y/N)");
+		String reply = sc.nextLine();
+		if(reply.equalsIgnoreCase("Y")) {
+			HM.clear();
+			System.out.print("Entries in HashMap are: " + HM);
+		}
+		else {
+			System.out.print("Entries in HashMap are: " + HM);
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HashMapMapping HMM = new HashMapMapping();
-		HMM.getKeyValue();
-		HMM.getHashMapSize();
-		HMM.copyMapping();
+//		HMM.getKeyValue();
+//		HMM.getHashMapSize();
+//		HMM.copyMapping();
+		HMM.removeAllMapping();
 
 	}
 
