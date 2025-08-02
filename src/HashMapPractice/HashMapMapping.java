@@ -105,15 +105,25 @@ public class HashMapMapping {
 			
 			HM.put(key, value);
 		}
-		System.out.print("Current Entries in HashMap are: " + HM);
+		System.out.println("Current Entries in HashMap are: " + HM);
 		System.out.println("Do you want to remove all entries from HashMap? (Y/N)");
 		String reply = sc.nextLine();
 		if(reply.equalsIgnoreCase("Y")) {
 			HM.clear();
-			System.out.print("Entries in HashMap are: " + HM);
+			System.out.println("Entries in HashMap are: " + HM);
 		}
 		else {
-			System.out.print("Entries in HashMap are: " + HM);
+			System.out.println("Entries in HashMap are: " + HM);
+		}
+		
+		/*Write a Java program to check whether a map contains key-value mappings (empty) or not.*/
+		
+		System.out.println("Is the HashMap Empty?");
+		if(HM.isEmpty()) {
+			System.out.println("HashMap is Empty!");
+		}
+		else {
+			System.out.println("Entries in HashMap are: " + HM);
 		}
 		
 	}
@@ -121,9 +131,9 @@ public class HashMapMapping {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HashMapMapping HMM = new HashMapMapping();
-//		HMM.getKeyValue();
-//		HMM.getHashMapSize();
-//		HMM.copyMapping();
+		HMM.getKeyValue();
+		HMM.getHashMapSize();
+		HMM.copyMapping();
 		HMM.removeAllMapping();
 
 	}
